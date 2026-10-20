@@ -1,0 +1,160 @@
+{
+  "es": {
+    "header": {
+      "lab": "Laboratorio"
+    },
+    "nav": {
+      "about": "Sobre nosotros",
+      "research": "Líneas de Investigación",
+      "team": "Nuestro Equipo",
+      "publications": "Publicaciones",
+      "services": "Servicios",
+      "news": "Novedades",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "slide1_title": "Bioquímica y Biofísica Aplicada al Agro",
+      "slide1_desc": "Avanzamos en el conocimiento molecular de interacciones entre microorganismos benéficos y cultivos de interés agronómico.",
+      "slide2_title": "Microbiología y Salud del Suelo",
+      "slide2_desc": "Estudiamos consorcios bacterianos, retención hídrica y bioinsumos para la rehabilitación de suelos productivos.",
+      "slide3_title": "Tecnología e Investigación de Punta",
+      "slide3_desc": "Infraestructura analítica para espectroscopía molecular, biopolímeros y biofísica de membranas en la UNQ."
+    },
+    "about": {
+      "title": "Sobre nosotros",
+      "p1": "El <strong>Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS)</strong> es una unidad de investigación científica y tecnológica radicada en el Departamento de Ciencia y Tecnología de la <strong>Universidad Nacional de Quilmes (UNQ)</strong>, integrada en el <strong>Centro de Bioquímica y Microbiología del Suelo (CBMS)</strong>.",
+      "p2": "Nuestro equipo interdisciplinario combina enfoques de biofísica molecular, bioquímica vegetal, microbiología del suelo y biotecnología agrícola para desentrañar los mecanismos que regulan la adaptación bacteriana a estreses ambientales y optimizar el rendimiento de cultivos sostenibles.",
+      "p3": "Mantenemos una activa vinculación con el sistema científico nacional (CONICET, CIC, ANPCyT) y con el sector socio-productivo, brindando servicios tecnológicos de alto nivel y formando recursos humanos de excelencia de grado y posgrado."
+    },
+    "research": {
+      "title": "Líneas de Investigación",
+      "line1_title": "Biofísica de Interacciones Membrana-Ligando",
+      "line1_desc": "Estudio fisicoquímico y molecular de las membranas de rizobacterias bajo condiciones de estrés osmótico y térmico, y caracterización de moléculas señal en la rizosfera.",
+      "line2_title": "Bioquímica del Suelo y Biogeoquímica",
+      "line2_desc": "Investigación de biopolímeros bacterianos y enzimas extracelulares implicadas en la dinámica de microagregados, retención hídrica y ciclaje de nutrientes edáficos.",
+      "line3_title": "Biología Estructural y Sistemas Macromoleculares",
+      "line3_desc": "Caracterización espectroscópica, termodinámica y estructural de proteínas y complejos macromoleculares vinculados a la tolerancia celular y bioemulsificación."
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "empty": "Información del equipo en proceso de actualización institucional."
+    },
+    "publications": {
+      "title": "Últimas Publicaciones",
+      "doi_btn": "Ver Publicación ↗",
+      "empty": "Publicaciones científicas en proceso de catalogación."
+    },
+    "services": {
+      "title": "Servicios",
+      "s1_title": "Caracterización Biofísica",
+      "s1_desc": "Espectroscopía de fluorescencia, dicroísmo circular y análisis de propiedades fisicoquímicas de sistemas macromoleculares.",
+      "s2_title": "Calidad de Inoculantes",
+      "s2_desc": "Ensayos microbiológicos de recuento, viabilidad y compatibilidad de formulaciones agro-biotecnológicas.",
+      "s3_title": "Asesoramiento Agro-Técnico",
+      "s3_desc": "Consultoría y vinculación tecnológica en diagnóstico de salud microbiológica de suelos y biofertilización.",
+      "s4_title": "Capacitación y Cursos",
+      "s4_desc": "Dictado de talleres y cursos especializados de posgrado en biofísica de membranas y bioquímica de suelos."
+    },
+    "news": {
+      "title": "Novedades",
+      "read_more": "Leer más ↗",
+      "empty": "Novedades y convocatorias en proceso de actualización."
+    },
+    "contact": {
+      "title": "Contacto",
+      "address_title": "Dirección",
+      "address_val": "Universidad Nacional de Quilmes<br>Roque Sáenz Peña 352 (B1876BXD), Bernal, Pcia. de Buenos Aires, Argentina",
+      "phone_title": "Teléfono",
+      "email_title": "Correo Electrónico",
+      "callout": "¿Interesado/a en realizar tesis de grado, becas doctorales o colaboraciones científico-tecnológicas? Contactanos directamente por correo institucional."
+    },
+    "footer": {
+      "desc": "Laboratorio de Bioquímica y Biofísica de Sistemas. Investigación, docencia y vinculación tecnológica en la Universidad Nacional de Quilmes.",
+      "sections": "Secciones",
+      "links": "Enlaces",
+      "affiliation_title": "Centro CBMS",
+      "affiliation_desc": "Laboratorio miembro del Centro de Bioquímica y Microbiología del Suelo (UNQ).",
+      "visit_center": "Visitar Sitio CBMS",
+      "rights": "Todos los derechos reservados."
+    }
+  },
+  "en": {
+    "header": {
+      "lab": "Laboratory"
+    },
+    "nav": {
+      "about": "About Us",
+      "research": "Research Lines",
+      "team": "Our Team",
+      "publications": "Publications",
+      "services": "Services",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "hero": {
+      "slide1_title": "Applied Biochemistry & Biophysics for Agriculture",
+      "slide1_desc": "Advancing molecular knowledge of interactions between beneficial microorganisms and crops of agronomic interest.",
+      "slide2_title": "Soil Microbiology and Soil Health",
+      "slide2_desc": "Investigating bacterial consortia, water retention dynamics, and bio-inputs for sustainable agricultural soil rehabilitation.",
+      "slide3_title": "Cutting-Edge Research & Technology",
+      "slide3_desc": "Analytical infrastructure for molecular spectroscopy, biopolymers, and membrane biophysics at UNQ."
+    },
+    "about": {
+      "title": "About Us",
+      "p1": "The <strong>Laboratory of Systems Biochemistry and Biophysics (LBBS)</strong> is a scientific and technological research unit situated in the Department of Science and Technology of the <strong>National University of Quilmes (UNQ)</strong>, integrated into the <strong>Center for Soil Biochemistry and Microbiology (CBMS)</strong>.",
+      "p2": "Our interdisciplinary team integrates molecular biophysics, plant biochemistry, soil microbiology, and agricultural biotechnology to unravel cellular adaptation mechanisms and boost sustainable crop performance.",
+      "p3": "We maintain active collaborations with the national research system (CONICET, CIC, ANPCyT) and the socio-productive agro-industry, providing high-level technological services and training undergraduate and graduate researchers."
+    },
+    "research": {
+      "title": "Research Lines",
+      "line1_title": "Biophysics of Membrane-Ligand Interactions",
+      "line1_desc": "Physicochemical and molecular study of rhizobacterial membranes under osmotic and thermal stress, and characterization of rhizosphere signaling molecules.",
+      "line2_title": "Soil Biochemistry & Biogeochemistry",
+      "line2_desc": "Investigation of bacterial biopolymers and extracellular enzymes involved in microaggregate stability, water retention, and edaphic nutrient cycling.",
+      "line3_title": "Structural Biology & Macromolecular Systems",
+      "line3_desc": "Spectroscopic, thermodynamic, and structural characterization of proteins and macromolecular complexes linked to cellular stress tolerance and bioemulsification."
+    },
+    "team": {
+      "title": "Our Team",
+      "empty": "Team roster is currently being updated."
+    },
+    "publications": {
+      "title": "Latest Publications",
+      "doi_btn": "View Article ↗",
+      "empty": "Scientific publications catalog in preparation."
+    },
+    "services": {
+      "title": "Services",
+      "s1_title": "Biophysical Characterization",
+      "s1_desc": "Fluorescence spectroscopy, circular dichroism, and physicochemical property analysis of macromolecular systems.",
+      "s2_title": "Inoculant Quality Testing",
+      "s2_desc": "Microbiological assays for viable cell counts, purity, and formulation compatibility in agro-biotech products.",
+      "s3_title": "Agro-Technical Consulting",
+      "s3_desc": "Scientific consulting and technological transfer in soil microbiological health diagnostics and biofertilization.",
+      "s4_title": "Workshops & Technical Training",
+      "s4_desc": "Specialized postgraduate workshops and technical courses in membrane biophysics and soil biochemistry."
+    },
+    "news": {
+      "title": "News & Activities",
+      "read_more": "Read more ↗",
+      "empty": "News and institutional announcements updating."
+    },
+    "contact": {
+      "title": "Contact",
+      "address_title": "Address",
+      "address_val": "National University of Quilmes<br>Roque Sáenz Peña 352 (B1876BXD), Bernal, Buenos Aires, Argentina",
+      "phone_title": "Phone",
+      "email_title": "Email",
+      "callout": "Interested in conducting undergraduate theses, doctoral fellowships, or scientific-technological collaborations? Contact us directly by institutional email."
+    },
+    "footer": {
+      "desc": "Laboratory of Systems Biochemistry and Biophysics. Research, education, and technology transfer at the National University of Quilmes.",
+      "sections": "Sections",
+      "links": "Links",
+      "affiliation_title": "CBMS Center",
+      "affiliation_desc": "Member laboratory of the Center for Soil Biochemistry and Microbiology (UNQ).",
+      "visit_center": "Visit CBMS Website",
+      "rights": "All rights reserved."
+    }
+  }
+}

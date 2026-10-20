@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "nombre": "Dra. Mariana L. Fernández",
+    "rol_es": "Directora del Laboratorio - Investigadora Principal CONICET",
+    "rol_en": "Laboratory Director - Principal Investigator CONICET",
+    "categoria": "direccion",
+    "foto": "imgs/equipo/miembro-1.jpg",
+    "email": "mfernandez@unq.edu.ar",
+    "perfil_url": "https://www.conicet.gov.ar",
+    "orden": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Dr. Lucas E. Benítez",
+    "rol_es": "Investigador Independiente CONICET - Prof. Adjunto UNQ",
+    "rol_en": "Independent Researcher CONICET - Associate Professor UNQ",
+    "categoria": "investigador",
+    "foto": "imgs/equipo/miembro-2.jpg",
+    "email": "lbenitez@unq.edu.ar",
+    "perfil_url": "https://orcid.org",
+    "orden": 2
+  },
+  {
+    "id": 3,
+    "nombre": "Dr. Gonzalo M. Rossi",
+    "rol_es": "Investigador Adjunto CONICET",
+    "rol_en": "Adjunct Researcher CONICET",
+    "categoria": "investigador",
+    "foto": "imgs/equipo/miembro-3.jpg",
+    "email": "grossi@unq.edu.ar",
+    "perfil_url": "https://orcid.org",
+    "orden": 3
+  },
+  {
+    "id": 4,
+    "nombre": "Dra. Carolina S. Gómez",
+    "rol_es": "Investigadora Adjunta CONICET",
+    "rol_en": "Adjunct Researcher CONICET",
+    "categoria": "investigador",
+    "foto": "imgs/equipo/miembro-4.jpg",
+    "email": "cgomez@unq.edu.ar",
+    "perfil_url": "https://orcid.org",
+    "orden": 4
+  },
+  {
+    "id": 5,
+    "nombre": "Dr. Martín R. Albarracín",
+    "rol_es": "Investigador Asistente CONICET",
+    "rol_en": "Assistant Researcher CONICET",
+    "categoria": "investigador",
+    "foto": "imgs/equipo/miembro-5.jpg",
+    "email": "malbarracin@unq.edu.ar",
+    "perfil_url": "https://orcid.org",
+    "orden": 5
+  },
+  {
+    "id": 6,
+    "nombre": "Dra. Sofía V. Herrera",
+    "rol_es": "Investigadora Asistente CONICET",
+    "rol_en": "Assistant Researcher CONICET",
+    "categoria": "investigador",
+    "foto": "imgs/equipo/miembro-6.jpg",
+    "email": "sherrera@unq.edu.ar",
+    "perfil_url": "https://orcid.org",
+    "orden": 6
+  },
+  {
+    "id": 7,
+    "nombre": "Lic. Federico D. Torres",
+    "rol_es": "Becario Doctoral CONICET",
+    "rol_en": "Doctoral Fellow CONICET",
+    "categoria": "becario",
+    "foto": "imgs/equipo/miembro-7.jpg",
+    "email": "ftorres@unq.edu.ar",
+    "perfil_url": "",
+    "orden": 7
+  },
+  {
+    "id": 8,
+    "nombre": "Biotec. Camila J. Navarro",
+    "rol_es": "Becaria Doctoral UNQ",
+    "rol_en": "Doctoral Fellow UNQ",
+    "categoria": "becario",
+    "foto": "imgs/equipo/miembro-8.jpg",
+    "email": "cnavarro@unq.edu.ar",
+    "perfil_url": "",
+    "orden": 8
+  },
+  {
+    "id": 9,
+    "nombre": "Lic. Matías E. Roldán",
+    "rol_es": "Becario Doctoral CONICET",
+    "rol_en": "Doctoral Fellow CONICET",
+    "categoria": "becario",
+    "foto": "imgs/equipo/miembro-9.jpg",
+    "email": "mroldan@unq.edu.ar",
+    "perfil_url": "",
+    "orden": 9
+  },
+  {
+    "id": 10,
+    "nombre": "Biotec. Julieta M. Castro",
+    "rol_es": "Becaria de Maestría CIC-PBA",
+    "rol_en": "Master's Fellow CIC-PBA",
+    "categoria": "becario",
+    "foto": "imgs/equipo/miembro-10.jpg",
+    "email": "jcastro@unq.edu.ar",
+    "perfil_url": "",
+    "orden": 10
+  },
+  {
+    "id": 11,
+    "nombre": "Lic. Rocío A. Morales",
+    "rol_es": "Becaria de Estímulo a las Vocaciones Científicas",
+    "rol_en": "Undergraduate Research Fellow",
+    "categoria": "becario",
+    "foto": "imgs/equipo/miembro-11.jpg",
+    "email": "rmorales@unq.edu.ar",
+    "perfil_url": "",
+    "orden": 11
+  },
+  {
+    "id": 12,
+    "nombre": "Téc. Nicolás P. Vega",
+    "rol_es": "Personal de Apoyo a la Investigación (CPA)",
+    "rol_en": "Technical Research Support Staff",
+    "categoria": "apoyo",
+    "foto": "imgs/equipo/miembro-12.jpg",
+    "email": "nvega@unq.edu.ar",
+    "perfil_url": "",
+    "orden": 12
+  }
+]

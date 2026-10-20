@@ -1,0 +1,79 @@
+/**
+ * LBBS - Laboratorio de Bioquímica y Biofísica de Sistemas (UNQ / CBMS)
+ * Design Tokens & Visual Properties (Bio-Organic Dark Mode)
+ * Based on ANALISIS_DISENO_VISUAL_LFGBBP.md & Mock-up LBBS.jpg
+ */
+
+:root {
+  /* Fluid Root Scale (prevents artificial zoom on Windows 125%-150% scaled laptops) */
+  font-size: clamp(13px, 0.35vw + 10px, 15px);
+
+  /* Brand Chromatic Palette */
+  --color-canvas: #252d23;          /* Dark Forest - Main page background */
+  --color-surface-dark: #1b201a;    /* Dark Earth Olive - Header & footer */
+  --color-surface-card: rgba(27, 32, 26, 0.82); /* Glassmorphic card surface */
+  --color-surface-glass: rgba(255, 255, 255, 0.04);
+  --color-surface-muted: #3a4436;   /* Muted olive surface */
+
+  /* Botanical Greens & Earth Tones */
+  --color-primary: #659A5A;         /* Sage Leaf - Primary identity & active lines */
+  --color-primary-deep: #4a7c41;    /* Deep Forest Green */
+  --color-primary-soft: #74a367;    /* Soft Sage */
+  --color-accent-mint: #a3d996;     /* Mint Sprout - Interactive hover & indicators */
+  --color-accent-glow: #29ce1c;     /* Organic glow */
+  --color-accent-warm: #8b5a2b;     /* Earth ochre / bronze */
+
+  /* Thematic Header Banners (Publications) */
+  --color-banner-salvia: #659A5A;   /* Card 1: Sage green */
+  --color-banner-bosque: #2d4f24;   /* Card 2: Deep forest green */
+  --color-banner-tierra: #8b5a2b;   /* Card 3: Warm ochre bronze */
+
+  /* Text Hierarchy & Contrast (WCAG AA Compliant >= 4.5:1) */
+  --color-text-white: #ffffff;      /* Headings, active nav, button text */
+  --color-text-primary: #f0f0f0;    /* Prominent body copy, names */
+  --color-text-secondary: #dcdcdc;  /* Descriptive body text */
+  --color-text-muted: #a0a0a0;      /* Metadata, dates, affiliations */
+  --color-text-dim: #727b6f;        /* Inactive controls, subtle borders */
+  --color-text-dark: #1a1a1a;       /* High-contrast dark text on light backgrounds */
+
+  /* Semantic Overlays & Borders */
+  --overlay-light-subtle: rgba(255, 255, 255, 0.05);
+  --overlay-light-medium: rgba(255, 255, 255, 0.12);
+  --overlay-shadow-card: rgba(0, 0, 0, 0.30);
+  --overlay-shadow-deep: rgba(0, 0, 0, 0.50);
+  --border-subtle: rgba(101, 154, 90, 0.25);
+  --border-accent: rgba(163, 217, 150, 0.45);
+  --border-white-faint: rgba(255, 255, 255, 0.15);
+
+  /* Morphology & Radii */
+  --radius-pill: 50px;              /* Buttons, nav items, language toggles */
+  --radius-capsule: 20px;           /* Tags and small badges */
+  --radius-card: 16px;              /* Standard cards and modal containers */
+  --radius-md: 12px;                /* Section blocks and carousel container */
+  --radius-sm: 8px;                 /* Buttons and thumbnails */
+  --radius-circle: 50%;             /* Team member portraits and round icons */
+
+  /* Elevations & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.20);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.30);
+  --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.40);
+  --shadow-glow-mint: 0 0 20px rgba(163, 217, 150, 0.35);
+
+  /* System Font Stack (0ms external download latency) */
+  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  --font-size-base: 1rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Transitions & Timing */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Containers */
+  --container-max-width: 1120px;
+  --header-height: 4.8rem;
+}

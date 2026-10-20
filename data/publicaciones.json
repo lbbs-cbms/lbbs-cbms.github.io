@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "titulo_es": "Dinámica biofísica y estabilidad de membranas en rizobacterias bajo déficit hídrico extremo",
+    "titulo_en": "Biophysical dynamics and membrane stability in rhizobacteria under extreme water deficit",
+    "autores": "Fernández M. L., Benítez L. E., Rossi G. M.",
+    "revista": "Soil Biology and Biochemistry, 189: 109240",
+    "anio": 2026,
+    "resumen_es": "Demostramos mediante espectroscopía de fluorescencia y anisotropía que la modulación de fosfolípidos en cepas pampeanas preserva la integridad de transporte molecular bajo estrés osmótico.",
+    "resumen_en": "We demonstrate via fluorescence spectroscopy and anisotropy that phospholipid modulation in pampean strains preserves molecular transport integrity under osmotic stress.",
+    "doi_url": "https://doi.org/10.1016/j.soilbio.2026.109240",
+    "color_destacado": "verde-salvia",
+    "orden": 1
+  },
+  {
+    "id": 2,
+    "titulo_es": "Complejos macromoleculares y polímeros extracelulares bacterianos para retención de humedad en suelos agrícolas",
+    "titulo_en": "Macromolecular complexes and bacterial extracellular polymers for soil moisture retention in agriculture",
+    "autores": "Gómez C. S., Albarracín M. R., Herrera S. V., Fernández M. L.",
+    "revista": "Applied and Environmental Microbiology, 92(5): e00452-26",
+    "anio": 2026,
+    "resumen_es": "Caracterización termodinámica de bioemulsionantes y exopolisacáridos producidos por bacterias endófitas rizosféricas para la mejora de microagregados edáficos.",
+    "resumen_en": "Thermodynamic characterization of bioemulsifiers and exopolysaccharides synthesized by rhizospheric endophytic bacteria for soil microaggregate enhancement.",
+    "doi_url": "https://doi.org/10.1128/aem.00452-26",
+    "color_destacado": "verde-bosque",
+    "orden": 2
+  },
+  {
+    "id": 3,
+    "titulo_es": "Bases fisicoquímicas de la señalización química planta-bacteria en la nodulación de leguminosas",
+    "titulo_en": "Physicochemical bases of plant-bacteria chemical signaling during legume nodulation",
+    "autores": "Torres F. D., Navarro C. J., Benítez L. E.",
+    "revista": "Frontiers in Plant Science, 17: 945123",
+    "anio": 2025,
+    "resumen_es": "Análisis cinético y espectrométrico de factores Nod purificados y su interacción con receptores de membrana plasmática radicular bajo condiciones salinas.",
+    "resumen_en": "Kinetic and spectrometric analysis of purified Nod factors and their interaction with root plasma membrane receptors under saline conditions.",
+    "doi_url": "https://doi.org/10.3389/fpls.2025.945123",
+    "color_destacado": "ocre-tierra",
+    "orden": 3
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "tipo": "convocatoria",
+    "titulo_es": "Apertura de Convocatoria a Becas Doctorales y Posdoctorales CONICET 2026-2027",
+    "titulo_en": "Call for CONICET Doctoral and Postdoctoral Fellowships 2026-2027",
+    "fecha": "2026-10-15",
+    "resumen_es": "El LBBS invita a graduados en Biotecnología, Bioquímica, Agronomía o carreras afines a postularse a proyectos de investigación en biofísica de la rizosfera.",
+    "resumen_en": "LBBS welcomes graduates in Biotechnology, Biochemistry, Agronomy, or related fields to apply for research projects in rhizosphere biophysics.",
+    "imagen": "imgs/novedades/novedad-1.jpg",
+    "enlace_url": "https://www.unq.edu.ar",
+    "estado": "publicado",
+    "orden": 1
+  },
+  {
+    "id": 2,
+    "tipo": "evento",
+    "titulo_es": "Jornada Internacional de Bioquímica y Microbiología del Suelo en la UNQ",
+    "titulo_en": "International Soil Biochemistry and Microbiology Symposium at UNQ",
+    "fecha": "2026-11-04",
+    "resumen_es": "Encuentro científico conjunto entre el LBBS y el Centro CBMS con conferencias magistrales sobre bioinsumos, física de suelos y sustentabilidad agronómica.",
+    "resumen_en": "Joint scientific meeting organized by LBBS and CBMS Center featuring keynote lectures on bio-inputs, soil biophysics, and agricultural sustainability.",
+    "imagen": "imgs/novedades/novedad-2.jpg",
+    "enlace_url": "https://cbms-unq.github.io",
+    "estado": "publicado",
+    "orden": 2
+  },
+  {
+    "id": 3,
+    "tipo": "noticia",
+    "titulo_es": "Nueva Incorporación de Instrumental de Espectroscopía Óptica de Alta Resolución",
+    "titulo_en": "Acquisition of New High-Resolution Optical Spectroscopy Instrumentation",
+    "fecha": "2026-09-28",
+    "resumen_es": "A través de financiamiento ANPCyT y UNQ, el laboratorio suma equipamiento para el análisis estructural no destructivo de biomoléculas y membranas.",
+    "resumen_en": "Through ANPCyT and UNQ research grants, the laboratory expands its infrastructure for non-destructive structural analysis of biomolecules and membranes.",
+    "imagen": "imgs/novedades/novedad-3.jpg",
+    "enlace_url": "https://www.unq.edu.ar",
+    "estado": "publicado",
+    "orden": 3
+  }
+]
