@@ -75,7 +75,8 @@
       "affiliation_title": "Centro CBMS",
       "affiliation_desc": "Laboratorio miembro del Centro de Bioquímica y Microbiología del Suelo (UNQ).",
       "visit_center": "Visitar Sitio CBMS",
-      "rights": "Todos los derechos reservados."
+      "rights": "Todos los derechos reservados.",
+      "developed_by": "Desarrollado por"
     }
   },
   "en": {
@@ -154,7 +155,8 @@
       "affiliation_title": "CBMS Center",
       "affiliation_desc": "Member laboratory of the Center for Soil Biochemistry and Microbiology (UNQ).",
       "visit_center": "Visit CBMS Website",
-      "rights": "All rights reserved."
+      "rights": "All rights reserved.",
+      "developed_by": "Developed by"
     }
   }
 }
