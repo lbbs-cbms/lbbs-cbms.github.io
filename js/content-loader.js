@@ -10,11 +10,14 @@
   let cachedTeam = null;
   let cachedPubs = null;
   let cachedNews = null;
+  let activeMemberId = null;
+  let activeTriggerCard = null;
 
   document.addEventListener('DOMContentLoaded', initContentLoader);
   window.addEventListener('languageChanged', handleLanguageChanged);
 
   function initContentLoader() {
+    initTeamModal();
     loadTeam();
     loadPublications();
     loadNews();
@@ -25,11 +28,156 @@
     renderTeam(cachedTeam);
     renderPublications(cachedPubs);
     renderNews(cachedNews);
+
+    // If team modal is open, re-populate in current language
+    if (activeMemberId && cachedTeam) {
+      const activeMember = cachedTeam.find(m => m.id === activeMemberId);
+      if (activeMember) {
+        populateModalData(activeMember);
+      }
+    }
   }
 
   // =========================================================================
-  // 1. Team Hydration
+  // 1. Team Hydration & Modal Dialog
   // =========================================================================
+  function initTeamModal() {
+    const modal = document.getElementById('teamModal');
+    const closeBtn = document.getElementById('modalCloseBtn');
+    if (!modal) return;
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => closeTeamModal());
+    }
+
+    // Close when clicking dialog backdrop outside content
+    modal.addEventListener('click', (e) => {
+      const rect = modal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= e.clientY &&
+        e.clientY <= rect.bottom &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.right
+      );
+      if (!isInDialog) {
+        closeTeamModal();
+      }
+    });
+
+    // Native cancel event (Escape key)
+    modal.addEventListener('cancel', (e) => {
+      e.preventDefault();
+      closeTeamModal();
+    });
+  }
+
+  function openTeamModal(memberId, triggerEl) {
+    const modal = document.getElementById('teamModal');
+    if (!modal || !cachedTeam) return;
+
+    const member = cachedTeam.find(m => m.id === memberId);
+    if (!member) return;
+
+    activeMemberId = memberId;
+    activeTriggerCard = triggerEl;
+
+    populateModalData(member);
+
+    if (typeof modal.showModal === 'function') {
+      modal.showModal();
+    } else {
+      modal.setAttribute('open', '');
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeTeamModal() {
+    const modal = document.getElementById('teamModal');
+    if (!modal) return;
+
+    if (typeof modal.close === 'function') {
+      modal.close();
+    } else {
+      modal.removeAttribute('open');
+    }
+    document.body.style.overflow = '';
+
+    if (activeTriggerCard) {
+      activeTriggerCard.focus();
+    }
+    activeMemberId = null;
+  }
+
+  function populateModalData(member) {
+    const photo = document.getElementById('modalMemberPhoto');
+    const name = document.getElementById('modalMemberName');
+    const title = document.getElementById('modalMemberTitle');
+    const category = document.getElementById('modalMemberCategory');
+    const bio = document.getElementById('modalMemberBio');
+    const emailLink = document.getElementById('modalMemberEmail');
+    const profileLink = document.getElementById('modalMemberProfile');
+
+    if (photo) {
+      photo.src = member.foto || 'imgs/equipo/avatar-default.svg';
+      photo.alt = member.nombre;
+    }
+
+    if (name) {
+      name.textContent = member.nombre;
+    }
+
+    if (title) {
+      const academicTitle = (currentLang === 'en' && member.titulo_en)
+        ? member.titulo_en
+        : (member.titulo_es || (currentLang === 'en' && member.rol_en ? member.rol_en : member.rol_es));
+      title.textContent = academicTitle;
+    }
+
+    if (category) {
+      const catKey = member.categoria || 'investigador';
+      const catLabels = {
+        es: {
+          direccion: 'Dirección',
+          investigador: 'Investigación',
+          becario: 'Formación Doctoral',
+          apoyo: 'Apoyo Técnico'
+        },
+        en: {
+          direccion: 'Leadership',
+          investigador: 'Research Staff',
+          becario: 'Doctoral Fellow',
+          apoyo: 'Technical Support'
+        }
+      };
+      category.textContent = catLabels[currentLang]?.[catKey] || catLabels['es'][catKey] || catKey;
+    }
+
+    if (bio) {
+      const description = (currentLang === 'en' && member.descripcion_en)
+        ? member.descripcion_en
+        : (member.descripcion_es || (currentLang === 'en' && member.rol_en ? member.rol_en : member.rol_es));
+      bio.textContent = description;
+    }
+
+    if (emailLink) {
+      if (member.email) {
+        emailLink.href = `mailto:${member.email}`;
+        emailLink.style.display = 'inline-flex';
+      } else {
+        emailLink.style.display = 'none';
+      }
+    }
+
+    if (profileLink) {
+      if (member.perfil_url) {
+        profileLink.href = member.perfil_url;
+        profileLink.style.display = 'inline-flex';
+      } else {
+        profileLink.style.display = 'none';
+      }
+    }
+  }
+
   async function loadTeam() {
     const container = document.getElementById('teamContainer');
     if (!container) return;
@@ -53,12 +201,20 @@
     const container = document.getElementById('teamContainer');
     if (!container || !team || team.length === 0) return;
 
+    const viewProfileText = currentLang === 'en' ? 'View profile' : 'Ver perfil';
+
     container.innerHTML = team.map(member => {
       const role = currentLang === 'en' && member.rol_en ? member.rol_en : member.rol_es;
       const photoSrc = member.foto || 'imgs/equipo/avatar-default.svg';
 
       return `
-        <article class="team-card" data-category="${member.categoria || 'investigador'}">
+        <article class="team-card" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-haspopup="dialog" 
+                 aria-label="${member.nombre} - ${viewProfileText}" 
+                 data-member-id="${member.id}" 
+                 data-category="${member.categoria || 'investigador'}">
           <div class="team-avatar-wrapper">
             <img src="${photoSrc}" 
                  alt="${member.nombre}" 
@@ -68,9 +224,23 @@
           </div>
           <h3 class="team-name">${member.nombre}</h3>
           <p class="team-role">${role}</p>
+          <span class="team-card-hint" aria-hidden="true">${viewProfileText}</span>
         </article>
       `;
     }).join('');
+
+    // Attach click and keyboard events
+    const cards = container.querySelectorAll('.team-card');
+    cards.forEach(card => {
+      const memberId = parseInt(card.getAttribute('data-member-id'), 10);
+      card.addEventListener('click', () => openTeamModal(memberId, card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openTeamModal(memberId, card);
+        }
+      });
+    });
   }
 
   // =========================================================================

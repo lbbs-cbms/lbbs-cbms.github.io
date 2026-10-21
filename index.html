@@ -1,436 +1,797 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS</title>
-  
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS">
-  <meta name="description" content="Sitio oficial del Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS), perteneciente al Centro de Bioquímica y Microbiología del Suelo (CBMS) de la Universidad Nacional de Quilmes (UNQ).">
-  <meta name="keywords" content="LBBS, CBMS, UNQ, Bioquímica, Biofísica, Microbiología del Suelo, Rizobacterias, CONICET, Bernal, Ciencia y Tecnología">
-  <meta name="author" content="Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS)">
-  <meta name="robots" content="index, follow">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS
+		</title>
 
-  <!-- Canonical and Alternates -->
-  <link rel="canonical" href="https://lbbs-cbms.github.io/">
-  <link rel="alternate" hreflang="es" href="https://lbbs-cbms.github.io/">
-  <link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/">
-  <link rel="alternate" hreflang="x-default" href="https://lbbs-cbms.github.io/">
+		<!-- Primary Meta Tags -->
+		<meta
+			name="title"
+			content="LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS" />
+		<meta
+			name="description"
+			content="Sitio oficial del Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS), perteneciente al Centro de Bioquímica y Microbiología del Suelo (CBMS) de la Universidad Nacional de Quilmes (UNQ)." />
+		<meta
+			name="keywords"
+			content="LBBS, CBMS, UNQ, Bioquímica, Biofísica, Microbiología del Suelo, Rizobacterias, CONICET, Bernal, Ciencia y Tecnología" />
+		<meta
+			name="author"
+			content="Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS)" />
+		<meta name="robots" content="index, follow" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lbbs-cbms.github.io/">
-  <meta property="og:title" content="LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS">
-  <meta property="og:description" content="Investigación científica, biofísica de sistemas agro-microbianos, bioinsumos y bioquímica del suelo en la Universidad Nacional de Quilmes.">
-  <meta property="og:image" content="https://lbbs-cbms.github.io/imgs/seo/og-preview.jpg">
-  <meta property="og:locale" content="es_AR">
-  <meta property="og:locale:alternate" content="en_US">
+		<!-- Canonical and Alternates -->
+		<link rel="canonical" href="https://lbbs-cbms.github.io/" />
+		<link rel="alternate" hreflang="es" href="https://lbbs-cbms.github.io/" />
+		<link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/" />
+		<link
+			rel="alternate"
+			hreflang="x-default"
+			href="https://lbbs-cbms.github.io/" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://lbbs-cbms.github.io/">
-  <meta property="twitter:title" content="LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS">
-  <meta property="twitter:description" content="Investigación científica, biofísica de sistemas agro-microbianos y bioquímica del suelo en la Universidad Nacional de Quilmes.">
-  <meta property="twitter:image" content="https://lbbs-cbms.github.io/imgs/seo/og-preview.jpg">
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://lbbs-cbms.github.io/" />
+		<meta
+			property="og:title"
+			content="LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS" />
+		<meta
+			property="og:description"
+			content="Investigación científica, biofísica de sistemas agro-microbianos, bioinsumos y bioquímica del suelo en la Universidad Nacional de Quilmes." />
+		<meta
+			property="og:image"
+			content="https://lbbs-cbms.github.io/imgs/seo/og-preview.jpg" />
+		<meta property="og:locale" content="es_AR" />
+		<meta property="og:locale:alternate" content="en_US" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="imgs/logo/favicon.svg">
-  <link rel="alternate icon" type="image/x-icon" href="imgs/logo/favicon.ico">
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://lbbs-cbms.github.io/" />
+		<meta
+			property="twitter:title"
+			content="LBBS | Laboratorio de Bioquímica y Biofísica de Sistemas - UNQ / CBMS" />
+		<meta
+			property="twitter:description"
+			content="Investigación científica, biofísica de sistemas agro-microbianos y bioquímica del suelo en la Universidad Nacional de Quilmes." />
+		<meta
+			property="twitter:image"
+			content="https://lbbs-cbms.github.io/imgs/seo/og-preview.jpg" />
 
-  <!-- Stylesheets (Zero External CDNs) -->
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/styles.css">
+		<!-- Favicons -->
+		<link rel="icon" type="image/svg+xml" href="imgs/logo/favicon.svg" />
+		<link
+			rel="alternate icon"
+			type="image/x-icon"
+			href="imgs/logo/favicon.ico" />
 
-  <!-- Academic & Institutional Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ResearchOrganization",
-    "name": "Laboratorio de Bioquímica y Biofísica de Sistemas",
-    "alternateName": "LBBS",
-    "url": "https://lbbs-cbms.github.io/",
-    "logo": "https://lbbs-cbms.github.io/imgs/logo/lbbs-logo.svg",
-    "description": "Laboratorio de investigación científica en biofísica molecular, bioquímica y microbiología aplicada al suelo y a la agricultura.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Roque Sáenz Peña 352",
-      "addressLocality": "Bernal",
-      "addressRegion": "Buenos Aires",
-      "postalCode": "B1876BXD",
-      "addressCountry": "AR"
-    },
-    "parentOrganization": [
-      {
-        "@type": "ResearchOrganization",
-        "name": "Centro de Bioquímica y Microbiología del Suelo",
-        "alternateName": "CBMS",
-        "url": "https://cbms-unq.github.io/"
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Universidad Nacional de Quilmes",
-        "alternateName": "UNQ",
-        "url": "https://www.unq.edu.ar/"
-      }
-    ]
-  }
-  </script>
-</head>
-<body>
+		<!-- Stylesheets (Zero External CDNs) -->
+		<link rel="stylesheet" href="css/tokens.css" />
+		<link rel="stylesheet" href="css/styles.css" />
 
-  <!-- ==========================================================================
+		<!-- Academic & Institutional Schema.org JSON-LD -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "ResearchOrganization",
+				"name": "Laboratorio de Bioquímica y Biofísica de Sistemas",
+				"alternateName": "LBBS",
+				"url": "https://lbbs-cbms.github.io/",
+				"logo": "https://lbbs-cbms.github.io/imgs/logo/lbbs-logo.svg",
+				"description": "Laboratorio de investigación científica en biofísica molecular, bioquímica y microbiología aplicada al suelo y a la agricultura.",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Roque Sáenz Peña 352",
+					"addressLocality": "Bernal",
+					"addressRegion": "Buenos Aires",
+					"postalCode": "B1876BXD",
+					"addressCountry": "AR"
+				},
+				"parentOrganization": [
+					{
+						"@type": "ResearchOrganization",
+						"name": "Centro de Bioquímica y Microbiología del Suelo",
+						"alternateName": "CBMS",
+						"url": "https://cbms-unq.github.io/"
+					},
+					{
+						"@type": "CollegeOrUniversity",
+						"name": "Universidad Nacional de Quilmes",
+						"alternateName": "UNQ",
+						"url": "https://www.unq.edu.ar/"
+					}
+				]
+			}
+		</script>
+	</head>
+	<body>
+		<!-- ==========================================================================
        1. Header: Logo LBBS + Navegación Institucional + Selector Idioma
        ========================================================================== -->
-  <header class="site-header">
-    <div class="container">
-      <nav class="navbar" aria-label="Navegación principal">
-        <div class="brand-wrapper">
-          <a href="#hero" class="brand-link" aria-label="Inicio LBBS">
-            <img src="imgs/logo/lbbs-logo.svg" alt="LBBS" class="brand-logo-img">
-          </a>
-          <div class="brand-badge">
-            <span class="brand-badge-sup" data-i18n="header.lab">Laboratorio</span>
-            <a href="https://cbms-unq.github.io/" target="_blank" rel="noopener noreferrer" class="brand-badge-sub" title="Visitar portal del Centro CBMS">Centro CBMS - UNQ ↗</a>
-          </div>
-        </div>
+		<header class="site-header">
+			<div class="container">
+				<nav class="navbar" aria-label="Navegación principal">
+					<div class="brand-wrapper">
+						<a href="#hero" class="brand-link" aria-label="Inicio LBBS">
+							<img
+								src="imgs/logo/lbbs-logo.svg"
+								alt="LBBS"
+								class="brand-logo-img" />
+						</a>
+						<div class="brand-badge">
+							<span class="brand-badge-sup" data-i18n="header.lab"
+								>Laboratorio</span
+							>
+							<a
+								href="https://cbms-unq.github.io/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="brand-badge-sub"
+								title="Visitar portal del Centro CBMS"
+								>Centro CBMS - UNQ ↗</a
+							>
+						</div>
+					</div>
 
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+					<button
+						class="nav-toggle"
+						id="navToggle"
+						aria-label="Abrir menú de navegación"
+						aria-expanded="false"
+						aria-controls="navMenu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 
-        <div class="nav-menu" id="navMenu">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#sobre-nosotros" class="nav-link" data-i18n="nav.about">Sobre nosotros</a></li>
-            <li class="nav-item"><a href="#investigacion" class="nav-link" data-i18n="nav.research">Líneas de Investigación</a></li>
-            <li class="nav-item"><a href="#equipo" class="nav-link" data-i18n="nav.team">Nuestro Equipo</a></li>
-            <li class="nav-item"><a href="#publicaciones" class="nav-link" data-i18n="nav.publications">Publicaciones</a></li>
-            <li class="nav-item"><a href="#servicios" class="nav-link" data-i18n="nav.services">Servicios</a></li>
-            <li class="nav-item"><a href="#novedades" class="nav-link" data-i18n="nav.news">Novedades</a></li>
-            <li class="nav-item"><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
-          </ul>
+					<div class="nav-menu" id="navMenu">
+						<ul class="nav-list">
+							<li class="nav-item">
+								<a href="#sobre-nosotros" class="nav-link" data-i18n="nav.about"
+									>Sobre nosotros</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="#investigacion"
+									class="nav-link"
+									data-i18n="nav.research"
+									>Líneas de Investigación</a
+								>
+							</li>
+							<li class="nav-item">
+								<a href="#equipo" class="nav-link" data-i18n="nav.team"
+									>Nuestro Equipo</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="#publicaciones"
+									class="nav-link"
+									data-i18n="nav.publications"
+									>Publicaciones</a
+								>
+							</li>
+							<li class="nav-item">
+								<a href="#servicios" class="nav-link" data-i18n="nav.services"
+									>Servicios</a
+								>
+							</li>
+							<li class="nav-item">
+								<a href="#novedades" class="nav-link" data-i18n="nav.news"
+									>Novedades</a
+								>
+							</li>
+							<li class="nav-item">
+								<a href="#contacto" class="nav-link" data-i18n="nav.contact"
+									>Contacto</a
+								>
+							</li>
+						</ul>
 
-          <div class="lang-switch" role="group" aria-label="Selector de idioma">
-            <button class="lang-btn active" id="btnLangEs" data-lang="es" aria-label="Cambiar a Español">ES</button>
-            <button class="lang-btn" id="btnLangEn" data-lang="en" aria-label="Switch to English">EN</button>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+						<div
+							class="lang-switch"
+							role="group"
+							aria-label="Selector de idioma">
+							<button
+								class="lang-btn active"
+								id="btnLangEs"
+								data-lang="es"
+								aria-label="Cambiar a Español">
+								ES
+							</button>
+							<button
+								class="lang-btn"
+								id="btnLangEn"
+								data-lang="en"
+								aria-label="Switch to English">
+								EN
+							</button>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
 
-  <main>
-    <!-- ==========================================================================
+		<main>
+			<!-- ==========================================================================
          2. Hero: Carrusel Institucional Accesible
          ========================================================================== -->
-    <section class="hero-section" id="hero" aria-label="Imágenes institucionales del laboratorio">
-      <div class="container">
-        <div class="carousel-wrapper" id="heroCarousel" role="region" aria-roledescription="carousel" aria-label="Galería destacada LBBS">
-          <div class="carousel-viewport" id="carouselViewport">
-            <!-- Slide 1 -->
-            <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 de 3">
-              <img src="imgs/hero/hero-campo.jpg" alt="Investigadores del LBBS inspeccionando cultivos experimentales a campo" class="carousel-img">
-              <div class="carousel-caption">
-                <h2 data-i18n="hero.slide1_title">Bioquímica y Biofísica Aplicada al Agro</h2>
-                <p data-i18n="hero.slide1_desc">Avanzamos en el conocimiento molecular de interacciones entre microorganismos benéficos y cultivos de interés agronómico.</p>
-              </div>
-            </div>
+			<section
+				class="hero-section"
+				id="hero"
+				aria-label="Imágenes institucionales del laboratorio">
+				<div class="container">
+					<div
+						class="carousel-wrapper"
+						id="heroCarousel"
+						role="region"
+						aria-roledescription="carousel"
+						aria-label="Galería destacada LBBS">
+						<div class="carousel-viewport" id="carouselViewport">
+							<!-- Slide 1 -->
+							<div
+								class="carousel-slide active"
+								role="group"
+								aria-roledescription="slide"
+								aria-label="1 de 3">
+								<img
+									src="imgs/hero/hero-campo.jpg"
+									alt="Investigadores del LBBS inspeccionando cultivos experimentales a campo"
+									class="carousel-img" />
+								<div class="carousel-caption">
+									<h2 data-i18n="hero.slide1_title">
+										Bioquímica y Biofísica Aplicada al Agro
+									</h2>
+									<p data-i18n="hero.slide1_desc">
+										Avanzamos en el conocimiento molecular de interacciones
+										entre microorganismos benéficos y cultivos de interés
+										agronómico.
+									</p>
+								</div>
+							</div>
 
-            <!-- Slide 2 -->
-            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
-              <img src="imgs/hero/hero-suelo.jpg" alt="Muestreo y análisis de microbiología y microagregados del suelo" class="carousel-img">
-              <div class="carousel-caption">
-                <h2 data-i18n="hero.slide2_title">Microbiología y Salud del Suelo</h2>
-                <p data-i18n="hero.slide2_desc">Estudiamos consorcios bacterianos, retención hídrica y bioinsumos para la rehabilitación de suelos productivos.</p>
-              </div>
-            </div>
+							<!-- Slide 2 -->
+							<div
+								class="carousel-slide"
+								role="group"
+								aria-roledescription="slide"
+								aria-label="2 de 3">
+								<img
+									src="imgs/hero/hero-suelo.jpg"
+									alt="Muestreo y análisis de microbiología y microagregados del suelo"
+									class="carousel-img" />
+								<div class="carousel-caption">
+									<h2 data-i18n="hero.slide2_title">
+										Microbiología y Salud del Suelo
+									</h2>
+									<p data-i18n="hero.slide2_desc">
+										Estudiamos consorcios bacterianos, retención hídrica y
+										bioinsumos para la rehabilitación de suelos productivos.
+									</p>
+								</div>
+							</div>
 
-            <!-- Slide 3 -->
-            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
-              <img src="imgs/hero/hero-lab.jpg" alt="Equipamiento biofísico y análisis espectroscópico en laboratorio" class="carousel-img">
-              <div class="carousel-caption">
-                <h2 data-i18n="hero.slide3_title">Tecnología e Investigación de Punta</h2>
-                <p data-i18n="hero.slide3_desc">Infraestructura analítica para espectroscopía molecular, biopolímeros y biofísica de membranas en la UNQ.</p>
-              </div>
-            </div>
-          </div>
+							<!-- Slide 3 -->
+							<div
+								class="carousel-slide"
+								role="group"
+								aria-roledescription="slide"
+								aria-label="3 de 3">
+								<img
+									src="imgs/hero/hero-lab.jpg"
+									alt="Equipamiento biofísico y análisis espectroscópico en laboratorio"
+									class="carousel-img" />
+								<div class="carousel-caption">
+									<h2 data-i18n="hero.slide3_title">
+										Tecnología e Investigación de Punta
+									</h2>
+									<p data-i18n="hero.slide3_desc">
+										Infraestructura analítica para espectroscopía molecular,
+										biopolímeros y biofísica de membranas en la UNQ.
+									</p>
+								</div>
+							</div>
+						</div>
 
-          <!-- Controles de Flechas -->
-          <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Diapositiva anterior">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-          <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Diapositiva siguiente">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
+						<!-- Controles de Flechas -->
+						<button
+							class="carousel-btn carousel-prev"
+							id="carouselPrev"
+							aria-label="Diapositiva anterior">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.5">
+								<polyline points="15 18 9 12 15 6"></polyline>
+							</svg>
+						</button>
+						<button
+							class="carousel-btn carousel-next"
+							id="carouselNext"
+							aria-label="Diapositiva siguiente">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.5">
+								<polyline points="9 18 15 12 9 6"></polyline>
+							</svg>
+						</button>
 
-          <!-- Indicadores de Posición (Dots) -->
-          <div class="carousel-indicators" id="carouselIndicators" role="tablist" aria-label="Indicadores de diapositivas">
-            <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Ir a diapositiva 1" data-slide="0"></button>
-            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Ir a diapositiva 2" data-slide="1"></button>
-            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Ir a diapositiva 3" data-slide="2"></button>
-          </div>
-        </div>
-      </div>
-    </section>
+						<!-- Indicadores de Posición (Dots) -->
+						<div
+							class="carousel-indicators"
+							id="carouselIndicators"
+							role="tablist"
+							aria-label="Indicadores de diapositivas">
+							<button
+								class="carousel-dot active"
+								role="tab"
+								aria-selected="true"
+								aria-label="Ir a diapositiva 1"
+								data-slide="0"></button>
+							<button
+								class="carousel-dot"
+								role="tab"
+								aria-selected="false"
+								aria-label="Ir a diapositiva 2"
+								data-slide="1"></button>
+							<button
+								class="carousel-dot"
+								role="tab"
+								aria-selected="false"
+								aria-label="Ir a diapositiva 3"
+								data-slide="2"></button>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <!-- ==========================================================================
+			<!-- ==========================================================================
          3. Sección "Sobre nosotros": Texto institucional + Foto grupal
          ========================================================================== -->
-    <section class="about-section" id="sobre-nosotros">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <h2 class="section-title title-left" data-i18n="about.title">Sobre nosotros</h2>
-            <p data-i18n="about.p1">
-              El <strong>Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS)</strong> es una unidad de investigación científica y tecnológica radicada en el Departamento de Ciencia y Tecnología de la <strong>Universidad Nacional de Quilmes (UNQ)</strong>, integrada en el <strong>Centro de Bioquímica y Microbiología del Suelo (CBMS)</strong>.
-            </p>
-            <p data-i18n="about.p2">
-              Nuestro equipo interdisciplinario combina enfoques de biofísica molecular, bioquímica vegetal, microbiología del suelo y biotecnología agrícola para desentrañar los mecanismos que regulan la adaptación bacteriana a estreses ambientales y optimizar el rendimiento de cultivos sostenibles.
-            </p>
-            <p data-i18n="about.p3">
-              Mantenemos una activa vinculación con el sistema científico nacional (CONICET, CIC, ANPCyT) y con el sector socio-productivo, brindando servicios tecnológicos de alto nivel y formando recursos humanos de excelencia de grado y posgrado.
-            </p>
-          </div>
-          <div class="about-image-wrapper">
-            <img src="imgs/equipo/equipo-grupal.jpg" alt="Equipo de investigadores y becarios del LBBS UNQ" class="about-image">
-          </div>
-        </div>
-      </div>
-    </section>
+			<section class="about-section" id="sobre-nosotros">
+				<div class="container">
+					<div class="about-grid">
+						<div class="about-text">
+							<h2 class="section-title title-left" data-i18n="about.title">
+								Sobre nosotros
+							</h2>
+							<p data-i18n="about.p1">
+								El
+								<strong
+									>Laboratorio de Bioquímica y Biofísica de Sistemas
+									(LBBS)</strong
+								>
+								es una unidad de investigación científica y tecnológica radicada
+								en el Departamento de Ciencia y Tecnología de la
+								<strong>Universidad Nacional de Quilmes (UNQ)</strong>,
+								integrada en el
+								<strong
+									>Centro de Bioquímica y Microbiología del Suelo (CBMS)</strong
+								>.
+							</p>
+							<p data-i18n="about.p2">
+								Nuestro equipo interdisciplinario combina enfoques de biofísica
+								molecular, bioquímica vegetal, microbiología del suelo y
+								biotecnología agrícola para desentrañar los mecanismos que
+								regulan la adaptación bacteriana a estreses ambientales y
+								optimizar el rendimiento de cultivos sostenibles.
+							</p>
+							<p data-i18n="about.p3">
+								Mantenemos una activa vinculación con el sistema científico
+								nacional (CONICET, CIC, ANPCyT) y con el sector
+								socio-productivo, brindando servicios tecnológicos de alto nivel
+								y formando recursos humanos de excelencia de grado y posgrado.
+							</p>
+						</div>
+						<div class="about-image-wrapper">
+							<img
+								src="imgs/equipo/equipo-grupal.jpg"
+								alt="Equipo de investigadores y becarios del LBBS UNQ"
+								class="about-image" />
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <!-- ==========================================================================
+			<!-- ==========================================================================
          4. Sección "Líneas de Investigación": Tarjetas modulares
          ========================================================================== -->
-    <section class="research-section" id="investigacion">
-      <div class="container">
-        <h2 class="section-title" data-i18n="research.title">Líneas de Investigación</h2>
-        <div class="research-grid">
-          <!-- Card 1 -->
-          <article class="research-card">
-            <div class="research-icon-wrapper">
-              <img src="imgs/icons/sprout.svg" alt="" class="research-icon">
-            </div>
-            <h3 data-i18n="research.line1_title">Biofísica de Interacciones Membrana-Ligando</h3>
-            <p data-i18n="research.line1_desc">Estudio fisicoquímico y molecular de las membranas de rizobacterias bajo condiciones de estrés osmótico y térmico, y caracterización de moléculas señal en la rizosfera.</p>
-          </article>
+			<section class="research-section" id="investigacion">
+				<div class="container">
+					<h2 class="section-title" data-i18n="research.title">
+						Líneas de Investigación
+					</h2>
+					<div class="research-grid">
+						<!-- Card 1 -->
+						<article class="research-card">
+							<div class="research-icon-wrapper">
+								<img src="imgs/icons/sprout.svg" alt="" class="research-icon" />
+							</div>
+							<h3 data-i18n="research.line1_title">
+								Biofísica de Interacciones Membrana-Ligando
+							</h3>
+							<p data-i18n="research.line1_desc">
+								Estudio fisicoquímico y molecular de las membranas de
+								rizobacterias bajo condiciones de estrés osmótico y térmico, y
+								caracterización de moléculas señal en la rizosfera.
+							</p>
+						</article>
 
-          <!-- Card 2 -->
-          <article class="research-card">
-            <div class="research-icon-wrapper">
-              <img src="imgs/icons/soil-pin.svg" alt="" class="research-icon">
-            </div>
-            <h3 data-i18n="research.line2_title">Bioquímica del Suelo y Biogeoquímica</h3>
-            <p data-i18n="research.line2_desc">Investigación de biopolímeros bacterianos y enzimas extracelulares implicadas en la dinámica de microagregados, retención hídrica y ciclaje de nutrientes edáficos.</p>
-          </article>
+						<!-- Card 2 -->
+						<article class="research-card">
+							<div class="research-icon-wrapper">
+								<img
+									src="imgs/icons/soil-pin.svg"
+									alt=""
+									class="research-icon" />
+							</div>
+							<h3 data-i18n="research.line2_title">
+								Bioquímica del Suelo y Biogeoquímica
+							</h3>
+							<p data-i18n="research.line2_desc">
+								Investigación de biopolímeros bacterianos y enzimas
+								extracelulares implicadas en la dinámica de microagregados,
+								retención hídrica y ciclaje de nutrientes edáficos.
+							</p>
+						</article>
 
-          <!-- Card 3 -->
-          <article class="research-card">
-            <div class="research-icon-wrapper">
-              <img src="imgs/icons/dna.svg" alt="" class="research-icon">
-            </div>
-            <h3 data-i18n="research.line3_title">Biología Estructural y Sistemas Macromoleculares</h3>
-            <p data-i18n="research.line3_desc">Caracterización espectroscópica, termodinámica y estructural de proteínas y complejos macromoleculares vinculados a la tolerancia celular y bioemulsificación.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+						<!-- Card 3 -->
+						<article class="research-card">
+							<div class="research-icon-wrapper">
+								<img src="imgs/icons/dna.svg" alt="" class="research-icon" />
+							</div>
+							<h3 data-i18n="research.line3_title">
+								Biología Estructural y Sistemas Macromoleculares
+							</h3>
+							<p data-i18n="research.line3_desc">
+								Caracterización espectroscópica, termodinámica y estructural de
+								proteínas y complejos macromoleculares vinculados a la
+								tolerancia celular y bioemulsificación.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
 
-    <!-- ==========================================================================
+			<!-- ==========================================================================
          5. Sección "Nuestro Equipo": Grilla dinámica desde equipo.json
          ========================================================================== -->
-    <section class="team-section" id="equipo">
-      <div class="container">
-        <h2 class="section-title" data-i18n="team.title">Nuestro Equipo</h2>
-        <div class="team-grid" id="teamContainer" aria-live="polite">
-          <!-- Renderizado dinámico desde data/equipo.json vía content-loader.js -->
-        </div>
-      </div>
-    </section>
+			<section class="team-section" id="equipo">
+				<div class="container">
+					<h2 class="section-title" data-i18n="team.title">Nuestro Equipo</h2>
+					<div class="team-grid" id="teamContainer" aria-live="polite">
+						<!-- Renderizado dinámico desde data/equipo.json vía content-loader.js -->
+					</div>
 
-    <!-- ==========================================================================
+					<!-- Modal Genérico de Integrantes del Equipo -->
+					<dialog id="teamModal" class="team-modal" aria-labelledby="modalMemberName" aria-describedby="modalMemberBio">
+						<div class="modal-dialog-content">
+							<button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar ventana">
+								&times;
+							</button>
+							<div class="modal-header">
+								<div class="modal-avatar-wrapper">
+									<img id="modalMemberPhoto" src="" alt="" class="modal-avatar" />
+								</div>
+								<div class="modal-header-info">
+									<span id="modalMemberCategory" class="modal-badge"></span>
+									<h3 id="modalMemberName" class="modal-name"></h3>
+									<p id="modalMemberTitle" class="modal-title"></p>
+								</div>
+							</div>
+							<div class="modal-body">
+								<h4 class="modal-section-heading" data-i18n="team.modal_heading_bio">Trayectoria y Líneas de Investigación</h4>
+								<p id="modalMemberBio" class="modal-bio"></p>
+							</div>
+							<div class="modal-footer" id="modalMemberLinks">
+								<a id="modalMemberEmail" href="" class="modal-contact-link modal-email-btn">
+									<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+									<span data-i18n="team.contact_email">Correo institucional</span>
+								</a>
+								<a id="modalMemberProfile" href="" target="_blank" rel="noopener noreferrer" class="modal-contact-link modal-profile-btn">
+									<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+									<span data-i18n="team.academic_profile">Perfil académico ↗</span>
+								</a>
+							</div>
+						</div>
+					</dialog>
+				</div>
+			</section>
+
+			<!-- ==========================================================================
          6. Sección "Últimas Publicaciones": Tarjetas desde publicaciones.json
          ========================================================================== -->
-    <section class="publications-section" id="publicaciones">
-      <div class="container">
-        <h2 class="section-title" data-i18n="publications.title">Últimas Publicaciones</h2>
-        <div class="publications-grid" id="publicationsContainer" aria-live="polite">
-          <!-- Renderizado dinámico desde data/publicaciones.json vía content-loader.js -->
-        </div>
-        <div class="publications-cta">
-          <a href="publicaciones.html" class="pub-all-btn">
-            <span data-i18n="publications.view_all">Ver todas las publicaciones →</span>
-          </a>
-        </div>
-      </div>
-    </section>
+			<section class="publications-section" id="publicaciones">
+				<div class="container">
+					<h2 class="section-title" data-i18n="publications.title">
+						Últimas Publicaciones
+					</h2>
+					<div
+						class="publications-grid"
+						id="publicationsContainer"
+						aria-live="polite">
+						<!-- Renderizado dinámico desde data/publicaciones.json vía content-loader.js -->
+					</div>
+					<div class="publications-cta">
+						<a href="publicaciones.html" class="pub-all-btn">
+							<span data-i18n="publications.view_all"
+								>Ver todas las publicaciones →</span
+							>
+						</a>
+					</div>
+				</div>
+			</section>
 
-    <!-- ==========================================================================
+			<!-- ==========================================================================
          7. Sección "Servicios": 4 bloques tecnológicos
          ========================================================================== -->
-    <section class="services-section" id="servicios">
-      <div class="container">
-        <h2 class="section-title" data-i18n="services.title">Servicios</h2>
-        <div class="services-grid">
-          <!-- Servicio 1 -->
-          <div class="service-card">
-            <div class="service-icon-wrapper">
-              <img src="imgs/icons/microscope.svg" alt="" class="service-icon">
-            </div>
-            <h3 class="service-title" data-i18n="services.s1_title">Caracterización Biofísica</h3>
-            <p class="service-desc" data-i18n="services.s1_desc">Espectroscopía de fluorescencia, dicroísmo circular y análisis de propiedades fisicoquímicas de sistemas macromoleculares.</p>
-          </div>
+			<section class="services-section" id="servicios">
+				<div class="container">
+					<h2 class="section-title" data-i18n="services.title">Servicios</h2>
+					<div class="services-grid">
+						<!-- Servicio 1 -->
+						<div class="service-card">
+							<div class="service-icon-wrapper">
+								<img
+									src="imgs/icons/microscope.svg"
+									alt=""
+									class="service-icon" />
+							</div>
+							<h3 class="service-title" data-i18n="services.s1_title">
+								Caracterización Biofísica
+							</h3>
+							<p class="service-desc" data-i18n="services.s1_desc">
+								Espectroscopía de fluorescencia, dicroísmo circular y análisis
+								de propiedades fisicoquímicas de sistemas macromoleculares.
+							</p>
+						</div>
 
-          <!-- Servicio 2 -->
-          <div class="service-card">
-            <div class="service-icon-wrapper">
-              <img src="imgs/icons/gear.svg" alt="" class="service-icon">
-            </div>
-            <h3 class="service-title" data-i18n="services.s2_title">Calidad de Inoculantes</h3>
-            <p class="service-desc" data-i18n="services.s2_desc">Ensayos microbiológicos de recuento, viabilidad y compatibilidad de formulaciones agro-biotecnológicas.</p>
-          </div>
+						<!-- Servicio 2 -->
+						<div class="service-card">
+							<div class="service-icon-wrapper">
+								<img src="imgs/icons/gear.svg" alt="" class="service-icon" />
+							</div>
+							<h3 class="service-title" data-i18n="services.s2_title">
+								Calidad de Inoculantes
+							</h3>
+							<p class="service-desc" data-i18n="services.s2_desc">
+								Ensayos microbiológicos de recuento, viabilidad y compatibilidad
+								de formulaciones agro-biotecnológicas.
+							</p>
+						</div>
 
-          <!-- Servicio 3 -->
-          <div class="service-card">
-            <div class="service-icon-wrapper">
-              <img src="imgs/icons/coin-analysis.svg" alt="" class="service-icon">
-            </div>
-            <h3 class="service-title" data-i18n="services.s3_title">Asesoramiento Agro-Técnico</h3>
-            <p class="service-desc" data-i18n="services.s3_desc">Consultoría y vinculación tecnológica en diagnóstico de salud microbiológica de suelos y biofertilización.</p>
-          </div>
+						<!-- Servicio 3 -->
+						<div class="service-card">
+							<div class="service-icon-wrapper">
+								<img
+									src="imgs/icons/coin-analysis.svg"
+									alt=""
+									class="service-icon" />
+							</div>
+							<h3 class="service-title" data-i18n="services.s3_title">
+								Asesoramiento Agro-Técnico
+							</h3>
+							<p class="service-desc" data-i18n="services.s3_desc">
+								Consultoría y vinculación tecnológica en diagnóstico de salud
+								microbiológica de suelos y biofertilización.
+							</p>
+						</div>
 
-          <!-- Servicio 4 -->
-          <div class="service-card">
-            <div class="service-icon-wrapper">
-              <img src="imgs/icons/building.svg" alt="" class="service-icon">
-            </div>
-            <h3 class="service-title" data-i18n="services.s4_title">Capacitación y Cursos</h3>
-            <p class="service-desc" data-i18n="services.s4_desc">Dictado de talleres y cursos especializados de posgrado en biofísica de membranas y bioquímica de suelos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+						<!-- Servicio 4 -->
+						<div class="service-card">
+							<div class="service-icon-wrapper">
+								<img
+									src="imgs/icons/building.svg"
+									alt=""
+									class="service-icon" />
+							</div>
+							<h3 class="service-title" data-i18n="services.s4_title">
+								Capacitación y Cursos
+							</h3>
+							<p class="service-desc" data-i18n="services.s4_desc">
+								Dictado de talleres y cursos especializados de posgrado en
+								biofísica de membranas y bioquímica de suelos.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <!-- ==========================================================================
+			<!-- ==========================================================================
          8. Sección "Novedades": Tarjetas dinámicas desde novedades.json
          ========================================================================== -->
-    <section class="news-section" id="novedades">
-      <div class="container">
-        <h2 class="section-title" data-i18n="news.title">Novedades</h2>
-        <div class="news-grid" id="newsContainer" aria-live="polite">
-          <!-- Renderizado dinámico desde data/novedades.json vía content-loader.js -->
-        </div>
-      </div>
-    </section>
+			<section class="news-section" id="novedades">
+				<div class="container">
+					<h2 class="section-title" data-i18n="news.title">Novedades</h2>
+					<div class="news-grid" id="newsContainer" aria-live="polite">
+						<!-- Renderizado dinámico desde data/novedades.json vía content-loader.js -->
+					</div>
+				</div>
+			</section>
 
-    <!-- ==========================================================================
+			<!-- ==========================================================================
          9. Sección "Contacto": Datos institucionales + Mapa interactivo UNQ
          ========================================================================== -->
-    <section class="contact-section" id="contacto">
-      <div class="container">
-        <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <div class="contact-item">
-              <img src="imgs/icons/map-marker.svg" alt="" class="contact-icon">
-              <div class="contact-details">
-                <h4 data-i18n="contact.address_title">Dirección</h4>
-                <p data-i18n="contact.address_val">Universidad Nacional de Quilmes<br>Roque Sáenz Peña 352 (B1876BXD), Bernal, Pcia. de Buenos Aires, Argentina</p>
-              </div>
-            </div>
+			<section class="contact-section" id="contacto">
+				<div class="container">
+					<h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+					<div class="contact-grid">
+						<div class="contact-card">
+							<div class="contact-item">
+								<img
+									src="imgs/icons/map-marker.svg"
+									alt=""
+									class="contact-icon" />
+								<div class="contact-details">
+									<h4 data-i18n="contact.address_title">Dirección</h4>
+									<p data-i18n="contact.address_val">
+										Universidad Nacional de Quilmes<br />Roque Sáenz Peña 352
+										(B1876BXD), Bernal, Pcia. de Buenos Aires, Argentina
+									</p>
+								</div>
+							</div>
 
-            <div class="contact-item">
-              <img src="imgs/icons/phone.svg" alt="" class="contact-icon">
-              <div class="contact-details">
-                <h4 data-i18n="contact.phone_title">Teléfono</h4>
-                <p><a href="tel:+541143657100" class="contact-link">+54 (11) 4365-7100 (Int. 5312)</a></p>
-              </div>
-            </div>
+							<div class="contact-item">
+								<img src="imgs/icons/phone.svg" alt="" class="contact-icon" />
+								<div class="contact-details">
+									<h4 data-i18n="contact.phone_title">Teléfono</h4>
+									<p>
+										<a href="tel:+541143657100" class="contact-link"
+											>+54 (11) 4365-7100 (Int. 5312)</a
+										>
+									</p>
+								</div>
+							</div>
 
-            <div class="contact-item">
-              <img src="imgs/icons/email.svg" alt="" class="contact-icon">
-              <div class="contact-details">
-                <h4 data-i18n="contact.email_title">Correo Electrónico</h4>
-                <p><a href="mailto:lbbs@unq.edu.ar" class="contact-link">lbbs@unq.edu.ar</a></p>
-              </div>
-            </div>
+							<div class="contact-item">
+								<img src="imgs/icons/email.svg" alt="" class="contact-icon" />
+								<div class="contact-details">
+									<h4 data-i18n="contact.email_title">Correo Electrónico</h4>
+									<p>
+										<a href="mailto:lbbs2023unq@gmail.com" class="contact-link"
+											>lbbs2023unq@gmail.com</a
+										>
+									</p>
+								</div>
+							</div>
 
-            <div class="contact-callout">
-              <p data-i18n="contact.callout">¿Interesado/a en realizar tesis de grado, becas doctorales o colaboraciones científico-tecnológicas? Contactanos directamente por correo institucional.</p>
-            </div>
-          </div>
+							<div class="contact-callout">
+								<p data-i18n="contact.callout">
+									¿Interesado/a en realizar tesis de grado, becas doctorales o
+									colaboraciones científico-tecnológicas? Contactanos
+									directamente por correo institucional.
+								</p>
+							</div>
+						</div>
 
-          <div class="contact-map-wrapper">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1293290680453!2d-58.28189872346747!3d-34.70699036270631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32de465b03515%3A0x6b7aaeb8bbd52c77!2sUniversidad%20Nacional%20de%20Quilmes!5e0!3m2!1ses!2sar!4v1729370000000!5m2!1ses!2sar" 
-              class="contact-map" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación del LBBS en la Universidad Nacional de Quilmes">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+						<div class="contact-map-wrapper">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1293290680453!2d-58.28189872346747!3d-34.70699036270631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32de465b03515%3A0x6b7aaeb8bbd52c77!2sUniversidad%20Nacional%20de%20Quilmes!5e0!3m2!1ses!2sar!4v1729370000000!5m2!1ses!2sar"
+								class="contact-map"
+								allowfullscreen=""
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								title="Ubicación del LBBS en la Universidad Nacional de Quilmes">
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  <!-- ==========================================================================
+		<!-- ==========================================================================
        10. Footer: Logo, Enlaces Secundarios, Afiliación CBMS y Copyright
        ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col footer-brand-col">
-          <img src="imgs/logo/lbbs-logo.svg" alt="LBBS" class="footer-logo">
-          <p class="footer-desc" data-i18n="footer.desc">Laboratorio de Bioquímica y Biofísica de Sistemas. Investigación, docencia y vinculación tecnológica en la Universidad Nacional de Quilmes.</p>
-        </div>
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-col footer-brand-col">
+						<img src="imgs/logo/lbbs-logo.svg" alt="LBBS" class="footer-logo" />
+						<p class="footer-desc" data-i18n="footer.desc">
+							Laboratorio de Bioquímica y Biofísica de Sistemas. Investigación,
+							docencia y vinculación tecnológica en la Universidad Nacional de
+							Quilmes.
+						</p>
+					</div>
 
-        <div class="footer-col">
-          <h4 data-i18n="footer.sections">Secciones</h4>
-          <ul class="footer-links">
-            <li><a href="#sobre-nosotros" data-i18n="nav.about">Sobre nosotros</a></li>
-            <li><a href="#investigacion" data-i18n="nav.research">Líneas de Investigación</a></li>
-            <li><a href="#equipo" data-i18n="nav.team">Nuestro Equipo</a></li>
-            <li><a href="#publicaciones" data-i18n="nav.publications">Publicaciones</a></li>
-          </ul>
-        </div>
+					<div class="footer-col">
+						<h4 data-i18n="footer.sections">Secciones</h4>
+						<ul class="footer-links">
+							<li>
+								<a href="#sobre-nosotros" data-i18n="nav.about"
+									>Sobre nosotros</a
+								>
+							</li>
+							<li>
+								<a href="#investigacion" data-i18n="nav.research"
+									>Líneas de Investigación</a
+								>
+							</li>
+							<li><a href="#equipo" data-i18n="nav.team">Nuestro Equipo</a></li>
+							<li>
+								<a href="#publicaciones" data-i18n="nav.publications"
+									>Publicaciones</a
+								>
+							</li>
+						</ul>
+					</div>
 
-        <div class="footer-col">
-          <h4 data-i18n="footer.links">Enlaces</h4>
-          <ul class="footer-links">
-            <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
-            <li><a href="#novedades" data-i18n="nav.news">Novedades</a></li>
-            <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
-            <li><a href="https://www.unq.edu.ar/" target="_blank" rel="noopener noreferrer">Portal UNQ ↗</a></li>
-          </ul>
-        </div>
+					<div class="footer-col">
+						<h4 data-i18n="footer.links">Enlaces</h4>
+						<ul class="footer-links">
+							<li>
+								<a href="#servicios" data-i18n="nav.services">Servicios</a>
+							</li>
+							<li><a href="#novedades" data-i18n="nav.news">Novedades</a></li>
+							<li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+							<li>
+								<a
+									href="https://www.unq.edu.ar/"
+									target="_blank"
+									rel="noopener noreferrer"
+									>Portal UNQ ↗</a
+								>
+							</li>
+						</ul>
+					</div>
 
-        <div class="footer-col">
-          <div class="footer-affiliation-card">
-            <h5 data-i18n="footer.affiliation_title">Centro CBMS</h5>
-            <p data-i18n="footer.affiliation_desc">Laboratorio miembro del Centro de Bioquímica y Microbiología del Suelo (UNQ).</p>
-            <a href="https://cbms-unq.github.io/" target="_blank" rel="noopener noreferrer" class="footer-center-btn">
-              <span data-i18n="footer.visit_center">Visitar Sitio CBMS</span> ↗
-            </a>
-          </div>
-        </div>
-      </div>
+					<div class="footer-col">
+						<div class="footer-affiliation-card">
+							<h5 data-i18n="footer.affiliation_title">Centro CBMS</h5>
+							<p data-i18n="footer.affiliation_desc">
+								Laboratorio miembro del Centro de Bioquímica y Microbiología del
+								Suelo (UNQ).
+							</p>
+							<a
+								href="https://cbms-unq.github.io/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="footer-center-btn">
+								<span data-i18n="footer.visit_center">Visitar Sitio CBMS</span>
+								↗
+							</a>
+						</div>
+					</div>
+				</div>
 
-      <div class="footer-bottom">
-        <p class="footer-copy">© 2026 Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS - UNQ). <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
-        <p class="footer-institution">Universidad Nacional de Quilmes — Bernal, Argentina</p>
-      </div>
+				<div class="footer-bottom">
+					<p class="footer-copy">
+						© 2026 Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS -
+						UNQ).
+						<span data-i18n="footer.rights"
+							>Todos los derechos reservados.</span
+						>
+					</p>
+					<p class="footer-institution">
+						Universidad Nacional de Quilmes — Bernal, Argentina
+					</p>
+				</div>
 
-      <p class="footer-credits"><span data-i18n="footer.developed_by">Desarrollado por</span> <a href="https://github.com/Bertolini-Victor" target="_blank" rel="noopener noreferrer">Victor Bertolini</a></p>
-    </div>
-  </footer>
+				<p class="footer-credits">
+					<span data-i18n="footer.developed_by">Desarrollado por</span>
+					<a
+						href="https://github.com/Bertolini-Victor"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Victor Bertolini</a
+					>
+				</p>
+			</div>
+		</footer>
 
-  <!-- Scripts: Vanilla ES6+ Modular (Zero External Libraries) -->
-  <script src="js/carousel.js"></script>
-  <script src="js/content-loader.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
-</body>
+		<!-- Scripts: Vanilla ES6+ Modular (Zero External Libraries) -->
+		<script src="js/carousel.js"></script>
+		<script src="js/content-loader.js"></script>
+		<script src="js/i18n.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>

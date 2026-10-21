@@ -37,7 +37,16 @@
     },
     "team": {
       "title": "Nuestro Equipo",
-      "empty": "Información del equipo en proceso de actualización institucional."
+      "empty": "Información del equipo en proceso de actualización institucional.",
+      "view_profile": "Ver perfil",
+      "close_modal": "Cerrar ventana",
+      "contact_email": "Correo institucional",
+      "academic_profile": "Perfil académico ↗",
+      "category_direccion": "Dirección",
+      "category_investigador": "Investigación",
+      "category_becario": "Formación Doctoral",
+      "category_apoyo": "Apoyo Técnico",
+      "modal_heading_bio": "Trayectoria y Líneas de Investigación"
     },
     "publications": {
       "title": "Últimas Publicaciones",
@@ -132,7 +141,16 @@
     },
     "team": {
       "title": "Our Team",
-      "empty": "Team roster is currently being updated."
+      "empty": "Team roster is currently being updated.",
+      "view_profile": "View profile",
+      "close_modal": "Close dialog",
+      "contact_email": "Institutional email",
+      "academic_profile": "Academic profile ↗",
+      "category_direccion": "Leadership",
+      "category_investigador": "Research Staff",
+      "category_becario": "Doctoral Fellow",
+      "category_apoyo": "Technical Support",
+      "modal_heading_bio": "Background & Research Focus"
     },
     "publications": {
       "title": "Latest Publications",
