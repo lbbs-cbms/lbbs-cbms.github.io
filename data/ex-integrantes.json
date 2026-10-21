@@ -1,0 +1,66 @@
+[
+  {
+    "id": "doctorado",
+    "categoria_es": "Doctorado y Formación Doctoral",
+    "categoria_en": "PhD & Doctoral Theses",
+    "integrantes": [
+      {
+        "id": 1,
+        "nombre": "Nombre Apellido 1",
+        "descripcion_es": "Doctor/a en Ciencia y Tecnología — Investigador/a en Centro de Investigación Ejemplo",
+        "descripcion_en": "PhD in Science and Technology — Researcher at Example Research Center"
+      },
+      {
+        "id": 2,
+        "nombre": "Nombre Apellido 2",
+        "descripcion_es": "Doctor/a en Ciencias Biológicas — Posdoctorado en Universidad Ejemplo",
+        "descripcion_en": "PhD in Biological Sciences — Postdoctoral Fellow at Example University"
+      }
+    ]
+  },
+  {
+    "id": "posdoctorado",
+    "categoria_es": "Posdoctorado",
+    "categoria_en": "Postdoctoral Fellows",
+    "integrantes": [
+      {
+        "id": 3,
+        "nombre": "Nombre Apellido 3",
+        "descripcion_es": "Investigador/a Posdoctoral — Actualmente Investigador/a Adjunto/a en Institución Ejemplo",
+        "descripcion_en": "Postdoctoral Researcher — Currently Associate Researcher at Example Institution"
+      }
+    ]
+  },
+  {
+    "id": "semanario",
+    "categoria_es": "Tesistas de Grado y Semanario",
+    "categoria_en": "Undergraduate Theses & Seminars",
+    "integrantes": [
+      {
+        "id": 4,
+        "nombre": "Nombre Apellido 4",
+        "descripcion_es": "Licenciatura en Biotecnología — Estudiante de Posgrado en Universidad Ejemplo",
+        "descripcion_en": "BSc in Biotechnology — Graduate Student at Example University"
+      },
+      {
+        "id": 5,
+        "nombre": "Nombre Apellido 5",
+        "descripcion_es": "Licenciatura en Bioquímica — Profesional en Laboratorio Tecnológico Ejemplo",
+        "descripcion_en": "BSc in Biochemistry — Professional at Example Technological Laboratory"
+      }
+    ]
+  },
+  {
+    "id": "pasantias",
+    "categoria_es": "Pasantías y Estancias de Investigación",
+    "categoria_en": "Internships & Research Stays",
+    "integrantes": [
+      {
+        "id": 6,
+        "nombre": "Nombre Apellido 6",
+        "descripcion_es": "Pasantía de Grado — Estudiante avanzado/a en Carrera Científica Ejemplo",
+        "descripcion_en": "Undergraduate Internship — Senior Student in Example Scientific Program"
+      }
+    ]
+  }
+]

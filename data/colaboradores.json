@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Dr. Nombre Apellido 1",
+    "afiliacion_es": "Universidad Nacional de Ejemplo — Facultad de Ciencias Exactas",
+    "afiliacion_en": "Example National University — Faculty of Exact Sciences"
+  },
+  {
+    "id": 2,
+    "titulo": "Dra. Nombre Apellido 2",
+    "afiliacion_es": "Centro de Investigaciones Científicas y Tecnológicas Ejemplo",
+    "afiliacion_en": "Example Scientific and Technological Research Center"
+  },
+  {
+    "id": 3,
+    "titulo": "Dr. Nombre Apellido 3",
+    "afiliacion_es": "Instituto de Microbiología y Biotecnología — Universidad Ejemplo",
+    "afiliacion_en": "Institute of Microbiology and Biotechnology — Example University"
+  },
+  {
+    "id": 4,
+    "titulo": "Dra. Nombre Apellido 4",
+    "afiliacion_es": "Laboratorio de Suelos y Bioinsumos — Organismo Ejemplo",
+    "afiliacion_en": "Soil and Bio-inputs Laboratory — Example Organization"
+  }
+]

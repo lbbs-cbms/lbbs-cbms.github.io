@@ -8,17 +8,25 @@
 
   let currentLang = localStorage.getItem('lbbs_lang') || 'es';
   let cachedTeam = null;
+  let cachedColab = null;
+  let cachedAlumni = null;
   let cachedPubs = null;
   let cachedNews = null;
   let activeMemberId = null;
   let activeTriggerCard = null;
+  let activeColabTrigger = null;
+  let activeAlumniTrigger = null;
 
   document.addEventListener('DOMContentLoaded', initContentLoader);
   window.addEventListener('languageChanged', handleLanguageChanged);
 
   function initContentLoader() {
     initTeamModal();
+    initColaboradoresModal();
+    initExIntegrantesModal();
     loadTeam();
+    loadColaboradores();
+    loadExIntegrantes();
     loadPublications();
     loadNews();
   }
@@ -26,6 +34,8 @@
   function handleLanguageChanged(e) {
     currentLang = e.detail.language || 'es';
     renderTeam(cachedTeam);
+    renderColaboradores(cachedColab);
+    renderExIntegrantes(cachedAlumni);
     renderPublications(cachedPubs);
     renderNews(cachedNews);
 
@@ -241,6 +251,201 @@
         }
       });
     });
+  }
+
+  // =========================================================================
+  // 1b. Colaboradores Modal & Hydration
+  // =========================================================================
+  function initColaboradoresModal() {
+    const modal = document.getElementById('colaboradoresModal');
+    const openBtn = document.getElementById('btnOpenColaboradores');
+    const closeBtn = document.getElementById('modalColabCloseBtn');
+    if (!modal || !openBtn) return;
+
+    openBtn.addEventListener('click', () => {
+      activeColabTrigger = openBtn;
+      if (typeof modal.showModal === 'function') {
+        modal.showModal();
+      } else {
+        modal.setAttribute('open', '');
+      }
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => closeColabModal());
+    }
+
+    modal.addEventListener('click', (e) => {
+      const rect = modal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= e.clientY &&
+        e.clientY <= rect.bottom &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.right
+      );
+      if (!isInDialog) {
+        closeColabModal();
+      }
+    });
+
+    modal.addEventListener('cancel', (e) => {
+      e.preventDefault();
+      closeColabModal();
+    });
+
+    function closeColabModal() {
+      if (typeof modal.close === 'function') {
+        modal.close();
+      } else {
+        modal.removeAttribute('open');
+      }
+      document.body.style.overflow = '';
+      if (activeColabTrigger) {
+        activeColabTrigger.focus();
+        activeColabTrigger = null;
+      }
+    }
+  }
+
+  async function loadColaboradores() {
+    const container = document.getElementById('colaboradoresContainer');
+    if (!container) return;
+
+    try {
+      const response = await fetch('data/colaboradores.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      cachedColab = await response.json();
+      renderColaboradores(cachedColab);
+    } catch (err) {
+      console.warn('Could not load collaborators data:', err);
+    }
+  }
+
+  function renderColaboradores(colabs) {
+    const container = document.getElementById('colaboradoresContainer');
+    if (!container || !colabs || colabs.length === 0) return;
+
+    container.innerHTML = colabs.map(colab => {
+      const affiliation = currentLang === 'en' && colab.afiliacion_en
+        ? colab.afiliacion_en
+        : colab.afiliacion_es;
+
+      return `
+        <article class="colab-card">
+          <div class="colab-icon-wrapper" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="colab-info">
+            <h4 class="colab-name">${colab.titulo}</h4>
+            <p class="colab-affiliation">${affiliation}</p>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // =========================================================================
+  // 1c. Ex-integrantes Modal & Hydration
+  // =========================================================================
+  function initExIntegrantesModal() {
+    const modal = document.getElementById('exIntegrantesModal');
+    const openBtn = document.getElementById('btnOpenExIntegrantes');
+    const closeBtn = document.getElementById('modalAlumniCloseBtn');
+    if (!modal || !openBtn) return;
+
+    openBtn.addEventListener('click', () => {
+      activeAlumniTrigger = openBtn;
+      if (typeof modal.showModal === 'function') {
+        modal.showModal();
+      } else {
+        modal.setAttribute('open', '');
+      }
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => closeAlumniModal());
+    }
+
+    modal.addEventListener('click', (e) => {
+      const rect = modal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= e.clientY &&
+        e.clientY <= rect.bottom &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.right
+      );
+      if (!isInDialog) {
+        closeAlumniModal();
+      }
+    });
+
+    modal.addEventListener('cancel', (e) => {
+      e.preventDefault();
+      closeAlumniModal();
+    });
+
+    function closeAlumniModal() {
+      if (typeof modal.close === 'function') {
+        modal.close();
+      } else {
+        modal.removeAttribute('open');
+      }
+      document.body.style.overflow = '';
+      if (activeAlumniTrigger) {
+        activeAlumniTrigger.focus();
+        activeAlumniTrigger = null;
+      }
+    }
+  }
+
+  async function loadExIntegrantes() {
+    const container = document.getElementById('exIntegrantesContainer');
+    if (!container) return;
+
+    try {
+      const response = await fetch('data/ex-integrantes.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      cachedAlumni = await response.json();
+      renderExIntegrantes(cachedAlumni);
+    } catch (err) {
+      console.warn('Could not load alumni data:', err);
+    }
+  }
+
+  function renderExIntegrantes(categories) {
+    const container = document.getElementById('exIntegrantesContainer');
+    if (!container || !categories || categories.length === 0) return;
+
+    container.innerHTML = categories.map(cat => {
+      const catTitle = currentLang === 'en' && cat.categoria_en ? cat.categoria_en : cat.categoria_es;
+      const membersHtml = (cat.integrantes || []).map(member => {
+        const desc = currentLang === 'en' && member.descripcion_en ? member.descripcion_en : member.descripcion_es;
+        return `
+          <article class="alumni-member-card">
+            <h5 class="alumni-member-name">${member.nombre}</h5>
+            <p class="alumni-member-desc">${desc}</p>
+          </article>
+        `;
+      }).join('');
+
+      return `
+        <section class="alumni-category-block">
+          <div class="alumni-category-header">
+            <span class="alumni-category-badge">${catTitle}</span>
+          </div>
+          <div class="alumni-members-grid">
+            ${membersHtml}
+          </div>
+        </section>
+      `;
+    }).join('');
   }
 
   // =========================================================================

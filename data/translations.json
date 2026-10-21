@@ -46,7 +46,13 @@
       "category_investigador": "Investigación",
       "category_becario": "Formación Doctoral",
       "category_apoyo": "Apoyo Técnico",
-      "modal_heading_bio": "Trayectoria y Líneas de Investigación"
+      "modal_heading_bio": "Trayectoria y Líneas de Investigación",
+      "btn_collaborators": "Colaboradores",
+      "btn_alumni": "Ex-integrantes",
+      "collaborators_modal_title": "Colaboradores Científicos",
+      "collaborators_modal_desc": "Investigadores e instituciones con quienes desarrollamos actividades de investigación y vinculación.",
+      "alumni_modal_title": "Ex-integrantes del Laboratorio",
+      "alumni_modal_desc": "Investigadores, becarios y estudiantes que formaron parte de nuestro equipo de investigación."
     },
     "publications": {
       "title": "Últimas Publicaciones",
@@ -171,7 +177,13 @@
       "category_investigador": "Research Staff",
       "category_becario": "Doctoral Fellow",
       "category_apoyo": "Technical Support",
-      "modal_heading_bio": "Background & Research Focus"
+      "modal_heading_bio": "Background & Research Focus",
+      "btn_collaborators": "Collaborators",
+      "btn_alumni": "Former Members",
+      "collaborators_modal_title": "Scientific Collaborators",
+      "collaborators_modal_desc": "Researchers and institutions with whom we collaborate on scientific research and joint projects.",
+      "alumni_modal_title": "Former Lab Members",
+      "alumni_modal_desc": "Researchers, fellows, and students who have been part of our research team."
     },
     "publications": {
       "title": "Latest Publications",
