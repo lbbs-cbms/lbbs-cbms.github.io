@@ -9,4 +9,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://lbbs-cbms.github.io/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/" />
   </url>
+  <url>
+    <loc>https://lbbs-cbms.github.io/publicaciones.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lbbs-cbms.github.io/publicaciones.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/publicaciones.html" />
+  </url>
 </urlset>

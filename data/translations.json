@@ -41,8 +41,23 @@
     },
     "publications": {
       "title": "Últimas Publicaciones",
+      "page_title": "Publicaciones Científicas",
+      "page_subtitle": "Artículos científicos, revisiones y contribuciones de investigación del Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS - UNQ).",
       "doi_btn": "Ver Publicación ↗",
-      "empty": "Publicaciones científicas en proceso de catalogación."
+      "empty": "Publicaciones científicas en proceso de catalogación.",
+      "view_all": "Ver todas las publicaciones →",
+      "back_to_home": "← Volver al inicio",
+      "filter_search_placeholder": "Buscar por título, autor o revista...",
+      "filter_year_all": "Todos los años",
+      "filter_label_year": "Año",
+      "filter_label_search": "Buscar",
+      "sort_label": "Ordenar",
+      "sort_recent": "Más recientes",
+      "sort_oldest": "Más antiguos",
+      "sort_title": "Título (A-Z)",
+      "results_count": "Mostrando {count} de {total} publicaciones",
+      "no_results": "No se encontraron publicaciones que coincidan con la búsqueda.",
+      "clear_filters": "Restablecer filtros"
     },
     "services": {
       "title": "Servicios",
@@ -121,8 +136,23 @@
     },
     "publications": {
       "title": "Latest Publications",
+      "page_title": "Scientific Publications",
+      "page_subtitle": "Scientific articles, reviews, and research contributions from the Laboratory of Systems Biochemistry and Biophysics (LBBS - UNQ).",
       "doi_btn": "View Article ↗",
-      "empty": "Scientific publications catalog in preparation."
+      "empty": "Scientific publications catalog in preparation.",
+      "view_all": "View all publications →",
+      "back_to_home": "← Back to Home",
+      "filter_search_placeholder": "Search by title, author, or journal...",
+      "filter_year_all": "All years",
+      "filter_label_year": "Year",
+      "filter_label_search": "Search",
+      "sort_label": "Sort",
+      "sort_recent": "Most recent",
+      "sort_oldest": "Oldest",
+      "sort_title": "Title (A-Z)",
+      "results_count": "Showing {count} of {total} publications",
+      "no_results": "No publications found matching your search criteria.",
+      "clear_filters": "Reset filters"
     },
     "services": {
       "title": "Services",

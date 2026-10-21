@@ -1046,6 +1046,232 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 /* ==========================================================================
+   Secondary Pages & Publications Catalog
+   ========================================================================== */
+
+.page-hero {
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, var(--color-surface-dark) 0%, var(--color-canvas) 100%);
+}
+
+.page-hero .breadcrumb {
+  margin-bottom: 1.25rem;
+}
+
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent-mint);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:hover,
+.breadcrumb-link:focus-visible {
+  color: var(--color-text-white);
+  text-decoration: underline;
+}
+
+.page-hero-title {
+  font-size: 2.15rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-white);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.page-hero-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 48rem;
+  line-height: 1.6;
+}
+
+/* Publications CTA on Home Page */
+.publications-cta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pub-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.85rem;
+  font-size: 0.92rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-white);
+  background-color: var(--color-primary-deep);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+}
+
+.pub-all-btn:hover,
+.pub-all-btn:focus-visible {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-mint);
+}
+
+/* Filter Controls Toolbar */
+.pub-filter-section {
+  padding: 2.5rem 0 4rem;
+}
+
+.pub-filter-toolbar {
+  background-color: var(--color-surface-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.filter-controls-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.25rem;
+  align-items: flex-end;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.filter-label {
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-input,
+.filter-select {
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  background-color: rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-white);
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  border-color: var(--color-accent-mint);
+  box-shadow: 0 0 0 3px rgba(163, 217, 150, 0.2);
+}
+
+.filter-input::placeholder {
+  color: var(--color-text-dim);
+}
+
+.filter-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a3d996' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  padding-right: 2.2rem;
+}
+
+.filter-select option {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-white);
+}
+
+.filter-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.84rem;
+}
+
+.filter-count-badge {
+  color: var(--color-text-muted);
+}
+
+.filter-count-highlight {
+  color: var(--color-accent-mint);
+  font-weight: var(--font-weight-bold);
+}
+
+.filter-reset-btn {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-reset-btn:hover {
+  background-color: var(--overlay-light-medium);
+  color: var(--color-text-white);
+  border-color: var(--color-accent-mint);
+}
+
+.pub-empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background-color: var(--color-surface-card);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-card);
+  color: var(--color-text-muted);
+}
+
+.pub-empty-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.pub-empty-title {
+  font-size: 1.15rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.pub-empty-text {
+  font-size: 0.9rem;
+  max-width: 32rem;
+  margin: 0 auto 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .filter-controls-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+
+/* ==========================================================================
    12. Responsive Breakpoints & Mobile Drawer
    ========================================================================== */
 

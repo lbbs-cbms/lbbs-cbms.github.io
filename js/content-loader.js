@@ -101,14 +101,21 @@
 
     const doiBtnText = currentLang === 'en' ? 'View Article ↗' : 'Ver Publicación ↗';
 
-    container.innerHTML = pubs.map(pub => {
-      const title = currentLang === 'en' && pub.titulo_en ? pub.titulo_en : pub.titulo_es;
-      const summary = currentLang === 'en' && pub.resumen_en ? pub.resumen_en : pub.resumen_es;
+    // In home page, strictly show only the latest 3 publications
+    const homePubs = pubs.slice(0, 3);
+
+    container.innerHTML = homePubs.map(pub => {
+      const title = currentLang === 'en' && pub.titulo_en ? pub.titulo_en : (pub.titulo_es || pub.titulo || '');
+      const summary = currentLang === 'en' && pub.resumen_en ? pub.resumen_en : (pub.resumen_es || pub.resumen || '');
+      const journal = pub.revista || pub.publicadoEn || '';
+      const year = pub.anio || pub.fechaPublicacion || 2025;
+      const link = pub.doi_url || pub.enlace || '';
+      const authors = pub.autores || '';
       const bannerTheme = getBannerClass(pub.color_destacado);
 
-      const linkHtml = pub.doi_url ? `
+      const linkHtml = link ? `
         <div class="pub-action-row">
-          <a href="${pub.doi_url}" target="_blank" rel="noopener noreferrer" class="pub-doi-btn">
+          <a href="${link}" target="_blank" rel="noopener noreferrer" class="pub-doi-btn">
             <span>${doiBtnText}</span>
           </a>
         </div>
@@ -117,12 +124,12 @@
       return `
         <article class="publication-card">
           <div class="pub-header-banner ${bannerTheme}">
-            <span class="pub-year-badge">${pub.anio || 2026}</span>
+            <span class="pub-year-badge">${year}</span>
           </div>
           <div class="pub-body">
             <h3 class="pub-title">${title}</h3>
-            <p class="pub-authors">${pub.autores || ''}</p>
-            <p class="pub-journal">${pub.revista || ''}</p>
+            <p class="pub-authors">${authors}</p>
+            <p class="pub-journal">${journal}</p>
             <p class="pub-summary">${summary}</p>
             ${linkHtml}
           </div>
