@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "titulo_es": "Servicio Institucional 1",
+    "titulo_en": "Institutional Service 1",
+    "descripcion_es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "descripcion_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "icono": "imgs/icons/microscope.svg",
+    "orden": 1
+  },
+  {
+    "id": 2,
+    "titulo_es": "Servicio Institucional 2",
+    "titulo_en": "Institutional Service 2",
+    "descripcion_es": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "descripcion_en": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "icono": "imgs/icons/gear.svg",
+    "orden": 2
+  },
+  {
+    "id": 3,
+    "titulo_es": "Servicio Institucional 3",
+    "titulo_en": "Institutional Service 3",
+    "descripcion_es": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "descripcion_en": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "icono": "imgs/icons/coin-analysis.svg",
+    "orden": 3
+  },
+  {
+    "id": 4,
+    "titulo_es": "Servicio Institucional 4",
+    "titulo_en": "Institutional Service 4",
+    "descripcion_es": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "descripcion_en": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "icono": "imgs/icons/building.svg",
+    "orden": 4
+  }
+]

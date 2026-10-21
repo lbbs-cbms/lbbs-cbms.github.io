@@ -10,6 +10,8 @@
   let cachedTeam = null;
   let cachedColab = null;
   let cachedAlumni = null;
+  let cachedResearch = null;
+  let cachedServices = null;
   let cachedPubs = null;
   let cachedNews = null;
   let activeMemberId = null;
@@ -27,6 +29,8 @@
     loadTeam();
     loadColaboradores();
     loadExIntegrantes();
+    loadResearch();
+    loadServices();
     loadPublications();
     loadNews();
   }
@@ -36,6 +40,8 @@
     renderTeam(cachedTeam);
     renderColaboradores(cachedColab);
     renderExIntegrantes(cachedAlumni);
+    renderResearch(cachedResearch);
+    renderServices(cachedServices);
     renderPublications(cachedPubs);
     renderNews(cachedNews);
 
@@ -581,6 +587,84 @@
             ${linkHtml}
           </div>
         </article>
+      `;
+    }).join('');
+  }
+
+  // =========================================================================
+  // 3b. Research Lines Hydration
+  // =========================================================================
+  async function loadResearch() {
+    const container = document.getElementById('researchContainer');
+    if (!container) return;
+
+    try {
+      const response = await fetch('data/lineas-investigacion.json');
+      if (!response.ok) return;
+      const data = await response.json();
+      cachedResearch = data.sort((a, b) => (a.orden || 99) - (b.orden || 99));
+      renderResearch(cachedResearch);
+    } catch (err) {
+      // Keep static fallback
+    }
+  }
+
+  function renderResearch(lines) {
+    const container = document.getElementById('researchContainer');
+    if (!container || !lines || lines.length === 0) return;
+
+    container.innerHTML = lines.map(line => {
+      const title = currentLang === 'en' && line.titulo_en ? line.titulo_en : (line.titulo_es || '');
+      const desc = currentLang === 'en' && line.descripcion_en ? line.descripcion_en : (line.descripcion_es || '');
+      const icon = line.icono || 'imgs/icons/sprout.svg';
+
+      return `
+        <article class="research-card">
+          <div class="research-icon-wrapper">
+            <img src="${icon}" alt="" class="research-icon" />
+          </div>
+          <h3>${title}</h3>
+          <p>${desc}</p>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // =========================================================================
+  // 3c. Services Hydration
+  // =========================================================================
+  async function loadServices() {
+    const container = document.getElementById('servicesContainer');
+    if (!container) return;
+
+    try {
+      const response = await fetch('data/servicios.json');
+      if (!response.ok) return;
+      const data = await response.json();
+      cachedServices = data.sort((a, b) => (a.orden || 99) - (b.orden || 99));
+      renderServices(cachedServices);
+    } catch (err) {
+      // Keep static fallback
+    }
+  }
+
+  function renderServices(services) {
+    const container = document.getElementById('servicesContainer');
+    if (!container || !services || services.length === 0) return;
+
+    container.innerHTML = services.map(s => {
+      const title = currentLang === 'en' && s.titulo_en ? s.titulo_en : (s.titulo_es || '');
+      const desc = currentLang === 'en' && s.descripcion_en ? s.descripcion_en : (s.descripcion_es || '');
+      const icon = s.icono || 'imgs/icons/gear.svg';
+
+      return `
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <img src="${icon}" alt="" class="service-icon" />
+          </div>
+          <h3 class="service-title">${title}</h3>
+          <p class="service-desc">${desc}</p>
+        </div>
       `;
     }).join('');
   }

@@ -1,61 +1,136 @@
-# Guía Operativa: Headless CMS en Google Sheets para LBBS
+# Guía Operativa: Headless CMS en Google Sheets para LBBS (v2.0)
 
 Esta guía documenta la configuración y uso del sistema de gestión de contenidos (**Headless CMS Modelo B**) para el portal del **Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS - UNQ / CBMS)**.
 
+Permite a los investigadores y editores autorizados actualizar de forma autónoma:
+1. **Nuestro Equipo Activo** (`data/equipo.json`)
+2. **Colaboradores Científicos** (`data/colaboradores.json`)
+3. **Ex-integrantes por Categoría** (`data/ex-integrantes.json`)
+4. **Líneas de Investigación** (`data/lineas-investigacion.json` y `data/translations.json`)
+5. **Servicios Institucionales** (`data/servicios.json` y `data/translations.json`)
+6. **Publicaciones Científicas** (`data/publicaciones.json`)
+7. **Novedades y Convocatorias** (`data/novedades.json`)
+
 ---
 
-## 1. Estructura de la Hoja de Cálculo Institucional
+## 1. Estructura de Pestañas con Columnas Bilingües Paralelas
 
-La hoja de cálculo de Google Sheets debe contener tres pestañas: **`Equipo`**, **`Publicaciones`** y **`Novedades`**.
+La hoja de cálculo institucional de Google Sheets cuenta con **7 pestañas**. Cada campo de texto dispone de su celda paralela en español (`_es`) y en inglés (`_en`), permitiendo que el selector de idioma del sitio web muestre la traducción exacta cargada por los investigadores.
 
-### Pestaña A: `Equipo`
+> [!TIP]
+> Puede generar y formatear automáticamente todas las pestañas y sus validaciones ejecutando desde la hoja de cálculo el menú:  
+> **`🌱 LBBS - Gestión Web > 📋 Generar / Formatear Plantillas de Hojas`**.
+
+---
+
+### Pestaña 1: `Equipo` (Investigadores Activos)
 
 | Columna | Tipo | Requerido | Descripción / Opciones |
 |---|---|:---:|---|
 | `id` | Entero | Sí | Identificador correlativo (1, 2, 3...) |
-| `nombre` | Texto | Sí | Nombre completo y título académico (ej: `Dra. Mariana L. Fernández`) |
-| `rol_es` | Texto | Sí | Cargo o rol en español (ej: `Directora del Laboratorio - Investigadora Principal`) |
-| `rol_en` | Texto | No | Cargo en inglés (ej: `Laboratory Director - Principal Investigator`) |
+| `nombre` | Texto | Sí | Nombre completo del investigador/a |
+| `rol_es` | Texto | Sí | Rol o cargo en español (ej: `Dirección / Investigador Principal`) |
+| `rol_en` | Texto | No | Rol o cargo en inglés (ej: `Director / Principal Investigator`) |
+| `titulo_es` | Texto | Sí | Título académico en español (ej: `Doctorado / Especialidad Académica`) |
+| `titulo_en` | Texto | No | Título en inglés (ej: `Ph.D. / Academic Specialty`) |
 | `categoria` | Desplegable | Sí | `direccion`, `investigador`, `becario`, `apoyo` |
 | `foto` | Texto | Sí | Ruta al archivo de imagen (ej: `imgs/equipo/miembro-1.jpg`) |
-| `email` | Correo | No | Casilla institucional (ej: `mfernandez@unq.edu.ar`) |
+| `email` | Correo | No | Casilla de correo institucional (ej: `contacto@ejemplo.com`) |
 | `perfil_url` | URL | No | Enlace a CV, CONICET, ResearchGate u ORCID |
-| `orden` | Entero | Sí | Prioridad de visualización en la grilla (menor número aparece primero) |
+| `descripcion_es`| Texto | Sí | Trayectoria y líneas de investigación en español |
+| `descripcion_en`| Texto | No | Trayectoria y líneas en inglés |
+| `orden` | Entero | Sí | Orden de presentación (1 aparece primero) |
 
 ---
 
-### Pestaña B: `Publicaciones`
+### Pestaña 2: `Colaboradores`
 
 | Columna | Tipo | Requerido | Descripción / Opciones |
 |---|---|:---:|---|
 | `id` | Entero | Sí | Identificador correlativo |
-| `titulo_es` | Texto | Sí | Título del artículo o paper científico |
-| `titulo_en` | Texto | No | Título en inglés |
-| `autores` | Texto | Sí | Nómina de autores (ej: `Fernández M. L., Benítez L. E., Rossi G. M.`) |
-| `revista` | Texto | Sí | Revista indexada, volumen y páginas (ej: `Soil Biology and Biochemistry, 189: 109240`) |
-| `anio` | Entero | Sí | Año de publicación (ej: `2026`) |
-| `resumen_es` | Texto | Sí | Resumen o abstract del trabajo en español |
-| `resumen_en` | Texto | No | Resumen en inglés |
-| `doi_url` | URL | No | Enlace permanente DOI (ej: `https://doi.org/10.1016/...`) |
-| `color_destacado`| Desplegable | Sí | `verde-salvia`, `verde-bosque`, `ocre-tierra` |
-| `orden` | Entero | Sí | Orden de presentación (1 para el más reciente) |
+| `titulo` | Texto | Sí | Título y nombre (ej: `Dr. Nombre Apellido 1`) |
+| `afiliacion_es` | Texto | Sí | Institución de procedencia en español |
+| `afiliacion_en` | Texto | No | Institución en inglés |
+| `orden` | Entero | Sí | Orden de presentación |
 
 ---
 
-### Pestaña C: `Novedades`
+### Pestaña 3: `ExIntegrantes`
+
+Los ex-integrantes se clasifican por categorías formativas o de vinculación. El script agrupa automáticamente las filas por categoría.
+
+| Columna | Tipo | Requerido | Descripción / Opciones |
+|---|---|:---:|---|
+| `categoria_id` | Desplegable | Sí | `doctorado`, `posdoctorado`, `semanario`, `pasantias`, `otros` |
+| `categoria_es` | Texto | Sí | Título de categoría en español (ej: `Doctorado y Formación Doctoral`) |
+| `categoria_en` | Texto | No | Título de categoría en inglés (ej: `PhD & Doctoral Theses`) |
+| `nombre` | Texto | Sí | Nombre completo del ex-integrante |
+| `descripcion_es`| Texto | Sí | Cargo actual, destino o titulación (ej: `Doctor/a — Investigador/a en Centro Ejemplo`) |
+| `descripcion_en`| Texto | No | Descripción paralela en inglés |
+| `orden` | Entero | Sí | Orden numérico |
+
+---
+
+### Pestaña 4: `LineasInvestigacion`
+
+| Columna | Tipo | Requerido | Descripción / Opciones |
+|---|---|:---:|---|
+| `id` | Entero | Sí | Identificador correlativo |
+| `titulo_es` | Texto | Sí | Título de la línea en español |
+| `titulo_en` | Texto | No | Título de la línea en inglés |
+| `descripcion_es`| Texto | Sí | Resumen temático en español |
+| `descripcion_en`| Texto | No | Resumen temático en inglés |
+| `icono` | Texto | Sí | Ruta al icono SVG (ej: `imgs/icons/sprout.svg`, `soil-pin.svg`, `dna.svg`) |
+| `orden` | Entero | Sí | Orden de aparición |
+
+---
+
+### Pestaña 5: `Servicios`
+
+| Columna | Tipo | Requerido | Descripción / Opciones |
+|---|---|:---:|---|
+| `id` | Entero | Sí | Identificador correlativo |
+| `titulo_es` | Texto | Sí | Denominación del servicio en español |
+| `titulo_en` | Texto | No | Denominación del servicio en inglés |
+| `descripcion_es`| Texto | Sí | Alcance analítico o técnico en español |
+| `descripcion_en`| Texto | No | Alcance en inglés |
+| `icono` | Texto | Sí | Ruta al icono SVG (ej: `imgs/icons/microscope.svg`, `gear.svg`, `building.svg`) |
+| `orden` | Entero | Sí | Orden de aparición |
+
+---
+
+### Pestaña 6: `Publicaciones`
+
+| Columna | Tipo | Requerido | Descripción / Opciones |
+|---|---|:---:|---|
+| `id` | Entero | Sí | Identificador correlativo |
+| `titulo_es` | Texto | Sí | Título de la publicación |
+| `titulo_en` | Texto | No | Título en inglés |
+| `autores` | Texto | Sí | Cita de autores (ej: `Apellido A., Apellido B.`) |
+| `revista` | Texto | Sí | Revista indexada, volumen y páginas |
+| `anio` | Entero | Sí | Año de publicación (ej: `2026`) |
+| `resumen_es` | Texto | Sí | Abstract o resumen en español |
+| `resumen_en` | Texto | No | Abstract en inglés |
+| `doi_url` | URL | No | Enlace oficial DOI (ej: `https://doi.org/10.1016/...`) |
+| `color_destacado`| Desplegable | Sí | `verde-salvia`, `verde-bosque`, `ocre-tierra` |
+| `orden` | Entero | Sí | Orden (1 para el más reciente) |
+
+---
+
+### Pestaña 7: `Novedades`
 
 | Columna | Tipo | Requerido | Descripción / Opciones |
 |---|---|:---:|---|
 | `id` | Entero | Sí | Identificador correlativo |
 | `tipo` | Desplegable | Sí | `noticia`, `evento`, `convocatoria`, `publicacion` |
-| `titulo_es` | Texto | Sí | Titular de la novedad en español (hasta 160 caracteres) |
+| `titulo_es` | Texto | Sí | Titular en español |
 | `titulo_en` | Texto | No | Titular en inglés |
 | `fecha` | Fecha | Sí | Formato `AAAA-MM-DD` |
-| `resumen_es` | Texto | Sí | Bajada informativa o descripción del evento en español |
-| `resumen_en` | Texto | No | Descripción en inglés |
-| `imagen` | Texto | Sí | Ruta a la fotografía (ej: `imgs/novedades/novedad-1.jpg`) |
-| `enlace_url` | URL | No | Enlace externo opcional a formulario, publicación o nota UNQ |
-| `estado` | Desplegable | Sí | `publicado`, `borrador`, `archivado` (sólo lo `publicado` impacta en la web) |
+| `resumen_es` | Texto | Sí | Bajada informativa en español |
+| `resumen_en` | Texto | No | Bajada informativa en inglés |
+| `imagen` | Texto | Sí | Ruta a la imagen (ej: `imgs/novedades/novedad-1.jpg`) |
+| `enlace_url` | URL | No | Enlace externo opcional a circular o nota |
+| `estado` | Desplegable | Sí | `publicado`, `borrador`, `archivado` (sólo lo `publicado` va a la web) |
 | `orden` | Entero | Sí | Prioridad de visualización |
 
 ---
@@ -66,18 +141,22 @@ La hoja de cálculo de Google Sheets debe contener tres pestañas: **`Equipo`**,
 2. Vaya a **Extensiones > Apps Script**.
 3. Copie y pegue el código íntegro de [`SyncEngine.gs`](./SyncEngine.gs) en el editor.
 4. En el panel izquierdo, haga clic en **Configuración del proyecto** (icono de engranaje) > **Propiedades de la secuencia de comandos** y configure las siguientes variables:
-   - `GITHUB_PAT`: Token personal de GitHub (Fine-Grained) con permisos de escritura limitados (`Contents: Read and write`) sobre el repositorio `lbbs-cbms.github.io`.
+   - `GITHUB_PAT`: Token personal de GitHub (Fine-Grained) con permisos de escritura (`Contents: Read and write`) sobre el repositorio `lbbs-cbms.github.io`.
    - `GITHUB_OWNER`: `lbbs-cbms`
    - `GITHUB_REPO`: `lbbs-cbms.github.io`
    - `GITHUB_BRANCH`: `main`
-   - `WHITELIST_EMAILS`: Lista separada por comas de correos autorizados (ej: `director.lbbs@unq.edu.ar, secretaria.lbbs@unq.edu.ar`).
+   - `WHITELIST_EMAILS`: Lista separada por comas de correos autorizados (ej: `investigador1@unq.edu.ar, secretaria@unq.edu.ar`).
 5. Guarde y recargue la hoja de cálculo. En la barra superior aparecerá el menú **🌱 LBBS - Gestión Web**.
 
 ---
 
-## 3. Flujo Editorial Autónomo
+## 3. Flujo Operativo Post-Deploy
 
-1. **Redacción**: El investigador o redactor autorizado completa las filas en la hoja correspondiente.
-2. **Publicación Desatendida**: Hace clic en el menú **🌱 LBBS - Gestión Web > 🔄 Sincronizar Todo** (o en la opción específica).
-3. **Validación y Push**: El script valida los campos, genera el JSON y realiza un commit directo a la rama `main` en GitHub.
-4. **Despliegue Inmediato**: GitHub Pages regenera el sitio estático automáticamente en menos de 60 segundos, sin necesidad de intervención técnica por parte del desarrollador del repositorio.
+1. **Carga y Edición**: Los investigadores agregan nuevos miembros, actualizan bajas, añaden colaboradores, publicaciones, noticias, o nuevas líneas/servicios completando las celdas en español y sus correspondientes paralelas en inglés.
+2. **Publicación Selectiva o Total**:
+   - Para actualizar sólo una sección: clic en **🌱 LBBS - Gestión Web > Publicar [Sección]**.
+   - Para actualizar todo el sitio: clic en **🌱 LBBS - Gestión Web > 🔄 Sincronizar Todo**.
+3. **Commit y Despliegue**:
+   - El script realiza una llamada a la API REST de GitHub con codificación Base64 UTF-8.
+   - Realiza un commit directo en la rama `main` de `lbbs-cbms.github.io`.
+   - GitHub Pages detecta el commit y recompila el sitio estático automáticamente en menos de 60 segundos.

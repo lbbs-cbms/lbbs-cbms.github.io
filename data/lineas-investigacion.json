@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "titulo_es": "Línea de Investigación 1",
+    "titulo_en": "Research Line 1",
+    "descripcion_es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    "descripcion_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    "icono": "imgs/icons/sprout.svg",
+    "orden": 1
+  },
+  {
+    "id": 2,
+    "titulo_es": "Línea de Investigación 2",
+    "titulo_en": "Research Line 2",
+    "descripcion_es": "Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue.",
+    "descripcion_en": "Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue.",
+    "icono": "imgs/icons/soil-pin.svg",
+    "orden": 2
+  },
+  {
+    "id": 3,
+    "titulo_es": "Línea de Investigación 3",
+    "titulo_en": "Research Line 3",
+    "descripcion_es": "Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    "descripcion_en": "Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    "icono": "imgs/icons/dna.svg",
+    "orden": 3
+  }
+]
