@@ -81,7 +81,9 @@
     if (!container) return;
 
     try {
-      const response = await fetch('data/publicaciones.json');
+      const isSubdir = window.location.pathname.includes('/pages/') || window.location.pathname.includes('\\pages\\');
+      const basePath = isSubdir ? '../' : '';
+      const response = await fetch(`${basePath}data/publicaciones.json`);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       allPublications = await response.json();
 

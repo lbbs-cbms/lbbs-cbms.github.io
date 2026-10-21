@@ -1324,8 +1324,9 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   line-height: 1.6;
 }
 
-/* Publications CTA on Home Page */
-.publications-cta {
+/* Publications & News CTA on Home Page */
+.publications-cta,
+.news-cta {
   margin-top: 2.5rem;
   display: flex;
   justify-content: center;
@@ -1376,6 +1377,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   grid-template-columns: 2fr 1fr 1fr;
   gap: 1.25rem;
   align-items: flex-end;
+}
+
+.filter-grid-news {
+  grid-template-columns: 2fr 1fr 1fr 1fr;
 }
 
 .filter-field {

@@ -333,7 +333,7 @@
       const data = await response.json();
       cachedNews = data
         .filter(item => !item.estado || item.estado === 'publicado')
-        .sort((a, b) => (a.orden || 99) - (b.orden || 99));
+        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
       renderNews(cachedNews);
     } catch (err) {
       console.warn('Could not load news data:', err);
@@ -350,7 +350,10 @@
 
     const readMoreText = currentLang === 'en' ? 'Read more ↗' : 'Leer más ↗';
 
-    container.innerHTML = news.map(item => {
+    // On home page, limit to latest 3 news by date
+    const homeNews = news.slice(0, 3);
+
+    container.innerHTML = homeNews.map(item => {
       const title = currentLang === 'en' && item.titulo_en ? item.titulo_en : item.titulo_es;
       const summary = currentLang === 'en' && item.resumen_en ? item.resumen_en : item.resumen_es;
       const imgSrc = item.imagen || 'imgs/hero/hero-lab.jpg';

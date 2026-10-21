@@ -10,11 +10,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/" />
   </url>
   <url>
-    <loc>https://lbbs-cbms.github.io/publicaciones.html</loc>
+    <loc>https://lbbs-cbms.github.io/pages/publicaciones.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lbbs-cbms.github.io/publicaciones.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/publicaciones.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lbbs-cbms.github.io/pages/publicaciones.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/pages/publicaciones.html" />
+  </url>
+  <url>
+    <loc>https://lbbs-cbms.github.io/pages/novedades.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lbbs-cbms.github.io/pages/novedades.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbbs-cbms.github.io/pages/novedades.html" />
   </url>
 </urlset>

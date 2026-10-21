@@ -13,7 +13,9 @@
 
   async function initI18n() {
     try {
-      const response = await fetch('data/translations.json');
+      const isSubdir = window.location.pathname.includes('/pages/') || window.location.pathname.includes('\\pages\\');
+      const basePath = isSubdir ? '../' : '';
+      const response = await fetch(`${basePath}data/translations.json`);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       translations = await response.json();
     } catch (err) {
